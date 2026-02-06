@@ -133,7 +133,7 @@ details[open] summary{margin-bottom:10px}
 .results-card.show{display:block}
 .results-score{font-size:3rem;font-weight:700;font-family:'Fraunces',serif;color:var(--teal)}
 .results-award{font-size:1.5rem;margin:10px 0}
-.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.results-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:20px 0}
 .results-stat{padding:14px;border-radius:14px;background:var(--bg-ivory)}
 .results-stat .label{font-size:.78rem;color:var(--ink-body);opacity:.7}
 .results-stat .value{font-size:1.4rem;font-weight:700;color:var(--teal);font-family:'IBM Plex Mono',monospace}
@@ -144,7 +144,8 @@ details[open] summary{margin-bottom:10px}
 .simplify .deep,.simplify details,.simplify .table-wrap{display:none}
 .hidden{display:none!important}
 /* RESPONSIVE */
-@media(max-width:980px){.hero-grid,.module-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}}
+@media(max-width:980px){.hero-grid,.module-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.results-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.hero{padding:30px 5vw 48px}.section{padding:40px 5vw}.nav{flex-direction:column;align-items:flex-start}}
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -179,7 +180,7 @@ details[open] summary{margin-bottom:10px}
 <div class="hero-panel">
 <div style="font-weight:700;font-size:1.1rem;color:var(--ink-deep)">Quick metrics</div>
 <div class="stat-grid">
-<div class="stat"><span>Exam-grade questions</span><strong>40</strong></div>
+<div class="stat"><span>Exam-grade questions</span><strong>65</strong></div>
 <div class="stat"><span>Clinical algorithms</span><strong>3</strong></div>
 <div class="stat"><span>High-yield tables</span><strong>8+</strong></div>
 <div class="stat"><span>Differential disorders</span><strong>7</strong></div>
@@ -255,6 +256,138 @@ details[open] summary{margin-bottom:10px}
 </table>
 </div>
 </div>
+<!-- ALGORITHM 1: CLL DIAGNOSTIC ALGORITHM -->
+<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#e8f4f3 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+<div style="width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center">
+<span style="color:#fff;font-size:1.3rem;font-weight:700">1</span>
+</div>
+<div>
+<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">CLL Diagnostic Algorithm</h4>
+<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
+</div>
+</div>
+
+<!-- START NODE -->
+<div style="display:flex;flex-direction:column;align-items:center;gap:0">
+<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.92rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
+Lymphocytosis Detected on FBC
+</div>
+
+<!-- ARROW DOWN -->
+<div style="display:flex;flex-direction:column;align-items:center;gap:0">
+<div style="width:3px;height:28px;background:var(--teal)"></div>
+<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div>
+</div>
+
+<!-- DECISION 1: Persistent >3 months? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;transform:rotate(0deg);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
+<span style="max-width:200px;display:block;line-height:1.4">Persistent &gt;3 months?</span>
+</div>
+
+<!-- BRANCH: YES / NO -->
+<div style="display:flex;width:100%;max-width:700px;justify-content:center;gap:0;position:relative;margin-top:-2px">
+<!-- LEFT BRANCH: NO -->
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:280px">
+<div style="display:flex;align-items:center;gap:0">
+<div style="width:60px;height:3px;background:var(--cranberry)"></div>
+<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--cranberry)"></div>
+</div>
+<div style="background:rgba(178,58,72,.06);border:2px solid var(--cranberry);border-radius:12px;padding:12px 16px;text-align:center;font-size:.82rem;font-weight:600;color:var(--cranberry);margin-top:-6px;width:100%">
+<div style="font-size:.7rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:6px">NO</div><br>
+Reactive / Transient<br>
+<span style="font-weight:400;font-size:.78rem;color:var(--ink-body)">Investigate other causes (infection, autoimmune, stress)</span>
+</div>
+</div>
+<!-- CENTER ARROW DOWN: YES -->
+<div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:0 12px">
+<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">YES</div>
+<div style="width:3px;height:24px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--sage)"></div>
+</div>
+<!-- RIGHT spacer -->
+<div style="flex:1;max-width:280px"></div>
+</div>
+
+<!-- STEP: Immunophenotyping -->
+<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
+Perform Immunophenotyping<br>
+<span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">(CD5, CD19, CD20, CD23, CD200, SmIg, FMC7)</span>
+</div>
+
+<!-- ARROW DOWN -->
+<div style="display:flex;flex-direction:column;align-items:center;gap:0">
+<div style="width:3px;height:28px;background:var(--teal)"></div>
+<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div>
+</div>
+
+<!-- DECISION 2: CLL Score 4-5? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
+<span style="max-width:200px;display:block;line-height:1.4">CLL Score 4&ndash;5?</span>
+</div>
+
+<!-- BRANCH: YES / NO -->
+<div style="display:flex;width:100%;max-width:800px;justify-content:center;gap:24px;position:relative;margin-top:-2px">
+<!-- LEFT: Score <4 -->
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:340px">
+<div style="display:flex;align-items:center;gap:0;margin-bottom:8px">
+<div style="width:40px;height:3px;background:var(--amber)"></div>
+<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--amber)"></div>
+</div>
+<div style="font-size:.7rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:8px">SCORE &lt;4</div>
+<div style="background:#fff5e6;border:2px solid var(--amber);border-radius:14px;padding:14px 16px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%">
+Consider Other Diagnoses<br>
+<span style="font-weight:400;font-size:.78rem;color:var(--ink-body)">SMZL, HCL, MCL, LPL/WM</span>
+</div>
+<!-- Arrow down -->
+<div style="width:3px;height:18px;background:var(--amber);margin:0 auto"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--amber);margin:0 auto"></div>
+<div style="background:var(--surface);border:2px solid var(--amber);border-radius:12px;padding:12px 14px;text-align:center;font-size:.8rem;color:var(--ink-body);width:100%;margin-top:4px">
+<strong>Additional Markers:</strong><br>
+CD103, BRAF V600E, Cyclin D1, MYD88 L265P, Annexin A1
+</div>
+</div>
+
+<!-- RIGHT: Score 4-5 -->
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:340px">
+<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">SCORE 4&ndash;5</div>
+<div style="width:3px;height:20px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--sage)"></div>
+
+<!-- DECISION 3: B cells >=5? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:14px 18px;text-align:center;font-size:.85rem;font-weight:600;color:var(--ink-deep);width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:100px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(224,159,62,.1)">
+<span style="max-width:180px;display:block;line-height:1.3;font-size:.82rem">B cells &ge;5&times;10&#8313;/L?</span>
+</div>
+
+<!-- Sub-branches -->
+<div style="display:flex;width:100%;gap:12px;margin-top:-2px">
+<!-- YES = CLL -->
+<div style="flex:1;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 8px;margin-bottom:4px">YES</div>
+<div style="width:3px;height:14px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
+<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:14px;text-align:center;font-weight:700;font-size:.95rem;color:var(--sage);width:100%;box-shadow:0 4px 16px rgba(42,157,143,.15);margin-top:4px">
+CLL
+<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:4px">Proceed to staging &amp; molecular workup</div>
+</div>
+</div>
+<!-- NO = MBL/SLL -->
+<div style="flex:1;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 8px;margin-bottom:4px">NO</div>
+<div style="width:3px;height:14px;background:var(--cranberry)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
+<div style="background:rgba(178,58,72,.05);border:2px solid var(--cranberry);border-radius:14px;padding:14px;text-align:center;font-weight:600;font-size:.85rem;color:var(--ink-deep);width:100%;margin-top:4px">
+MBL or SLL
+<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:4px">Check for tissue disease (adenopathy, organomegaly)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END ALGORITHM 1 -->
+
 <div class="callout pearl"><div class="callout-label">Clinical Pearl</div><div class="callout-text">In typical CLL with high lymphocyte count and classic phenotype, lymph node biopsy is NOT required. Reserve biopsy for atypical cases and suspected lymphoma.</div></div>
 </section>
 
@@ -433,28 +566,184 @@ details[open] summary{margin-bottom:10px}
 </ul>
 </div>
 </div>
-<div class="card deep" style="margin-top:14px">
-<h4>Treatment Decision Algorithm</h4>
-<div class="algo">
-<div class="algo-box algo-decide">CLL diagnosed &rarr; Active disease criteria met?</div>
-<div class="algo-row">
-<div class="algo-box algo-action">NO &rarr; Active surveillance</div>
-<div class="algo-box algo-decide">YES &rarr; Assess fitness + biomarkers</div>
+<!-- ALGORITHM 2: CLL TREATMENT DECISION ALGORITHM (ENHANCED) -->
+<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#e8f4f3 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative;overflow-x:auto">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+<div style="width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center">
+<span style="color:#fff;font-size:1.3rem;font-weight:700">2</span>
 </div>
-<div class="algo-arrow">&darr;</div>
-<div class="algo-row">
-<div class="algo-box algo-warn">del(17p)/TP53 or unmutated IGHV &rarr; Pathway inhibitor (BTKi or BCL2i+anti-CD20)</div>
-<div class="algo-box algo-action">Mutated IGHV, no TP53 &rarr; Consider BTKi/BCL2i OR FCR in selected fit young patients</div>
-</div>
-<div class="algo-arrow">&darr;</div>
-<div class="algo-box algo-decide">Relapsed / Refractory?</div>
-<div class="algo-row">
-<div class="algo-box algo-action">After BTKi &rarr; Switch to venetoclax-based</div>
-<div class="algo-box algo-action">After BCL2i &rarr; Switch to BTKi-based</div>
-<div class="algo-box algo-warn">Multi-refractory &rarr; Allo-HSCT / CAR-T evaluation</div>
+<div>
+<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">CLL Treatment Decision Algorithm</h4>
+<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
 </div>
 </div>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:0;min-width:320px">
+
+<!-- ROW 1: START NODE -->
+<div style="background:var(--surface);border:2.5px solid var(--teal);border-radius:14px;padding:16px 28px;text-align:center;font-size:.95rem;font-weight:700;color:var(--teal);max-width:380px;width:100%;box-shadow:0 6px 20px rgba(0,109,119,.12)">
+CLL Diagnosed
 </div>
+
+<!-- Arrow down -->
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:24px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
+
+<!-- ROW 2: DECISION DIAMOND - Active disease? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:20px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:130px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
+<span style="max-width:220px;display:block;line-height:1.4">Active Disease<br>Criteria Met?</span>
+</div>
+
+<!-- ROW 3: YES / NO BRANCHES -->
+<div style="display:flex;width:100%;max-width:860px;justify-content:center;gap:0;position:relative;margin-top:-2px">
+
+<!-- LEFT BRANCH: NO = Watch & Wait -->
+<div style="flex:0 0 auto;display:flex;align-items:flex-start;max-width:240px">
+<div style="display:flex;flex-direction:column;align-items:center;width:100%">
+<div style="display:flex;align-items:center;gap:0">
+<div style="width:50px;height:3px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--sage)"></div>
+</div>
+<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin:4px 0 6px">NO</div>
+<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px;text-align:center;font-size:.88rem;font-weight:700;color:var(--sage);width:100%;box-shadow:0 4px 12px rgba(42,157,143,.1)">
+Watch &amp; Wait
+<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:6px;line-height:1.5">Monitor every 3&ndash;6 months<br>FBC, clinical exam, LDT</div>
+</div>
+</div>
+</div>
+
+<!-- CENTER: YES arrow continuing down -->
+<div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:0 20px">
+<div style="font-size:.68rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">YES</div>
+<div style="width:3px;height:28px;background:var(--amber)"></div>
+<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--amber)"></div>
+</div>
+
+<!-- RIGHT spacer -->
+<div style="flex:0 0 auto;max-width:240px"></div>
+</div>
+
+<!-- ROW 4: Assess Biomarkers -->
+<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:14px 22px;text-align:center;font-size:.88rem;font-weight:600;color:var(--ink-deep);max-width:440px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.08)">
+Assess TP53/del(17p) + IGHV Mutation Status + Patient Fitness
+</div>
+
+<!-- Arrow down -->
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:24px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
+
+<!-- ROW 5: DECISION DIAMOND - TP53? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.88rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
+<span style="max-width:220px;display:block;line-height:1.3">del(17p) / TP53<br>Disrupted?</span>
+</div>
+
+<!-- ROW 6: THREE TREATMENT COLUMNS -->
+<div style="display:flex;width:100%;max-width:920px;justify-content:center;gap:16px;margin-top:4px;flex-wrap:wrap">
+
+<!-- COL 1: TP53 Disrupted (High Risk) -->
+<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">YES &mdash; TP53 DISRUPTED</div>
+<div style="width:3px;height:16px;background:var(--cranberry)"></div>
+<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--cranberry)"></div>
+<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(178,58,72,.08)">
+<div style="color:var(--cranberry);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">High Risk</div>
+<div style="font-weight:700;color:var(--cranberry)">BTKi Preferred</div>
+<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Zanubrutinib or Acalabrutinib<br>(2nd-gen preferred over ibrutinib)</div>
+<div style="margin:10px 0;padding:8px 0;border-top:1.5px dashed var(--cranberry);border-bottom:1.5px dashed var(--cranberry);font-size:.76rem;color:var(--ink-body)"><strong>OR</strong></div>
+<div style="font-weight:600">Venetoclax + anti-CD20</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:4px;padding:6px;background:rgba(178,58,72,.06);border-radius:8px">Avoid CIT &mdash; CIT resistance expected</div>
+</div>
+</div>
+
+<!-- COL 2: TP53 Intact + IGHV Mutated (Favourable) -->
+<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">NO + IGHV MUTATED</div>
+<div style="width:3px;height:16px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--sage)"></div>
+<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(42,157,143,.08)">
+<div style="color:var(--sage);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Favourable</div>
+<div style="font-weight:700;color:var(--sage)">Consider FCR</div>
+<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Fit patients &lt;65 years<br>(curative potential in this subset)</div>
+<div style="margin:10px 0;padding:8px 0;border-top:1.5px dashed var(--sage);border-bottom:1.5px dashed var(--sage);font-size:.76rem;color:var(--ink-body)"><strong>OR</strong></div>
+<div style="font-weight:600">BTKi / Venetoclax + Obinutuzumab</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:4px;padding:6px;background:rgba(42,157,143,.06);border-radius:8px">Equally effective; preferred if not fit for FCR</div>
+</div>
+</div>
+
+<!-- COL 3: TP53 Intact + IGHV Unmutated (Intermediate) -->
+<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">NO + IGHV UNMUTATED</div>
+<div style="width:3px;height:16px;background:var(--amber)"></div>
+<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--amber)"></div>
+<div style="background:#fff5e6;border:2.5px solid var(--amber);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(224,159,62,.08)">
+<div style="color:#b87a20;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Intermediate Risk</div>
+<div style="font-weight:700;color:#b87a20">BTKi or Venetoclax + Obinutuzumab</div>
+<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Pathway inhibitors preferred<br>over CIT in unmutated IGHV</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:8px;padding:6px;background:rgba(224,159,62,.08);border-radius:8px">Avoid FCR &mdash; short remissions expected</div>
+</div>
+</div>
+</div>
+
+<!-- FRAIL / ELDERLY CALLOUT -->
+<div style="margin-top:18px;background:rgba(178,58,72,.04);border:2px dashed var(--cranberry);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;width:100%;max-width:700px">
+<div style="min-width:36px;height:36px;border-radius:50%;background:var(--cranberry);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<span style="color:#fff;font-size:1rem;font-weight:700">!</span>
+</div>
+<div style="font-size:.82rem;color:var(--ink-deep);line-height:1.5">
+<strong style="color:var(--cranberry)">Frail / Elderly Patients:</strong> Chlorambucil + Obinutuzumab or low-dose ibrutinib. Venetoclax + Obinutuzumab also an option with careful TLS monitoring.
+</div>
+</div>
+
+<!-- SEPARATOR LINE -->
+<div style="width:100%;max-width:700px;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);margin:24px 0 8px;border-radius:2px"></div>
+<div style="font-size:.82rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px">Relapsed / Refractory Setting</div>
+
+<!-- Arrow down -->
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:18px;background:var(--teal)"></div><div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--teal)"></div></div>
+
+<!-- DECISION: What was prior therapy? -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:14px 20px;text-align:center;font-size:.85rem;font-weight:600;color:var(--ink-deep);max-width:340px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:100px;display:flex;align-items:center;justify-content:center">
+<span style="max-width:200px;display:block;line-height:1.3;font-size:.82rem">What Was<br>Prior Therapy?</span>
+</div>
+
+<!-- RELAPSE COLUMNS -->
+<div style="display:flex;width:100%;max-width:860px;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:4px">
+
+<!-- After BTKi -->
+<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">AFTER BTKi</div>
+<div style="width:3px;height:12px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
+<div style="background:#e8f7f5;border:2px solid var(--sage);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
+<div style="font-weight:700;color:var(--sage);margin-bottom:4px">Switch to Venetoclax-based</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Venetoclax + Rituximab (fixed duration)</div>
+</div>
+</div>
+
+<!-- After BCL2i -->
+<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">AFTER BCL2i</div>
+<div style="width:3px;height:12px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
+<div style="background:#e8f7f5;border:2px solid var(--sage);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
+<div style="font-weight:700;color:var(--sage);margin-bottom:4px">Switch to BTKi-based</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Zanubrutinib / Acalabrutinib continuous</div>
+</div>
+</div>
+
+<!-- Multi-refractory -->
+<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">MULTI-REFRACTORY</div>
+<div style="width:3px;height:12px;background:var(--cranberry)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
+<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
+<div style="font-weight:700;color:var(--cranberry);margin-bottom:4px">Allo-HSCT / CAR-T</div>
+<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Clinical trial evaluation<br>Pirtobrutinib (non-covalent BTKi)</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<!-- END ALGORITHM 2 -->
 <details>
 <summary>Key Drug Profiles</summary>
 <div class="table-wrap">
@@ -516,6 +805,57 @@ details[open] summary{margin-bottom:10px}
 </ul>
 </div>
 </div>
+<!-- ALGORITHM 3: RICHTER TRANSFORMATION WORKUP -->
+<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#fdf0f1 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+<div style="width:44px;height:44px;border-radius:50%;background:var(--cranberry);display:flex;align-items:center;justify-content:center">
+<span style="color:#fff;font-size:1.3rem;font-weight:700">3</span>
+</div>
+<div>
+<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">Richter Transformation Workup Algorithm</h4>
+<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0">
+<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px 24px;text-align:center;font-size:.92rem;font-weight:700;color:var(--cranberry);max-width:460px;width:100%;box-shadow:0 4px 12px rgba(178,58,72,.15)">
+&#9888; Clinical Suspicion: Rapid node growth + Rising LDH + B symptoms
+</div>
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--cranberry)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--cranberry)"></div></div>
+<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
+PET/CT Scan<br><span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">Identify most metabolically active site (SUV<sub>max</sub> often &gt;5)</span>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
+<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
+PET-Guided Tissue Biopsy<br><span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">Core/excisional biopsy from hottest node</span>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
+<!-- DECISION: Clonal relationship -->
+<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
+<span style="max-width:220px;display:block;line-height:1.4">Clonally related to CLL?</span>
+</div>
+<!-- Branches -->
+<div style="display:flex;width:100%;max-width:700px;justify-content:center;gap:20px;margin-top:4px;flex-wrap:wrap">
+<div style="flex:1;min-width:260px;max-width:320px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.7rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">YES (~80%)</div>
+<div style="width:3px;height:14px;background:var(--cranberry)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
+<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px;text-align:center;font-weight:700;font-size:.9rem;color:var(--cranberry);width:100%;margin-top:4px">
+Clonally Related DLBCL<div style="font-size:.78rem;font-weight:400;color:var(--ink-body);margin-top:6px">Poor prognosis (median OS &lt;1 year)<br>R-CHOP/R-EPOCH &rarr; allo-HSCT if eligible<br>Consider clinical trials, checkpoint inhibitors</div>
+</div>
+</div>
+<div style="flex:1;min-width:260px;max-width:320px;display:flex;flex-direction:column;align-items:center">
+<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">NO (~20%)</div>
+<div style="width:3px;height:14px;background:var(--sage)"></div>
+<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
+<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px;text-align:center;font-weight:700;font-size:.9rem;color:var(--sage);width:100%;margin-top:4px">
+Clonally Unrelated DLBCL<div style="font-size:.78rem;font-weight:400;color:var(--ink-body);margin-top:6px">Prognosis like de novo DLBCL<br>Standard R-CHOP (&plusmn; HSCT)<br>Much better outcomes</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END ALGORITHM 3 -->
+
 <div class="callout red-flag"><div class="callout-label">Red Flag</div><div class="callout-text">Rapid node growth + rising LDH + B symptoms &rarr; suspect Richter transformation. Urgent tissue biopsy from the most metabolically active site (PET-guided) is essential.</div></div>
 </section>
 
@@ -588,21 +928,22 @@ details[open] summary{margin-bottom:10px}
 
 <!-- MODULE 8: FIGURES -->
 <section class="module" id="mod-fig">
-<div class="module-head"><h3>Module 8: Figures Explained</h3><span class="module-tag tag-fig">Visual Guide</span></div>
+<div class="module-head"><h3>Module 8: Figures &amp; Visual Atlas</h3><span class="module-tag tag-fig">Visual Guide</span></div>
 <div class="module-grid">
-<div class="card"><h4>Fig 23.1</h4><p>CLL evolves stepwise from HSC genetic/epigenetic lesions through polyclonal B-cell expansion, oligoclonal selection, MBL, and finally overt CLL.</p></div>
-<div class="card"><h4>Fig 23.2</h4><p>Typical CLL blood film: small mature lymphocytes with scanty cytoplasm and smudge cells (Gumprecht cells).</p></div>
-<div class="card"><h4>Fig 23.3</h4><p>Increased prolymphocytes (&gt;15%) signals accelerated/transforming CLL. Dual population of small lymphocytes and larger nucleolated cells.</p></div>
-<div class="card"><h4>Fig 23.4</h4><p>Binucleated lymphocytes characteristic of persistent polyclonal B-cell lymphocytosis (a benign mimic).</p></div>
-<div class="card"><h4>Fig 23.5</h4><p>Large blast-like atypical cells corresponding to Richter syndrome with blood involvement.</p></div>
-<div class="card"><h4>Fig 23.6</h4><p>Treatment pathway integrates disease activity criteria, biology (IGHV/TP53), and patient fitness for therapy selection.</p></div>
-<div class="card"><h4>Fig 23.7</h4><p>Villous lymphocytes supporting SMZL pattern on blood film.</p></div>
-<div class="card"><h4>Fig 23.8</h4><p>Typical hairy cells with fine cytoplasmic projections supporting HCL diagnosis.</p></div>
-<div class="card"><h4>Fig 23.9</h4><p>Marrow trephine in HCL showing classic clear-zone (fried egg) infiltration pattern.</p></div>
-<div class="card"><h4>Fig 23.10</h4><p>Trephine morphology reinforcing HCL diagnosis with diffuse marrow involvement.</p></div>
-<div class="card"><h4>Fig 23.11</h4><p>Leukaemic MCL cells can mimic CLL morphologically but differ biologically (Cyclin D1+, t(11;14)).</p></div>
-<div class="card"><h4>Fig 23.12</h4><p>Cleaved nuclei and centrocyte morphology supporting follicular lymphoma leukaemic spillover.</p></div>
-<div class="card"><h4>Fig 23.13</h4><p>Nucleolated villous cells suggesting splenic B-cell lymphoma/leukaemia with prominent nucleoli (HCL variant).</p></div>
+<div class="card"><h4>Fig 1 &mdash; CLL Pathogenesis</h4><img src="images/1.png" alt="Genetic and epigenetic events leading to CLL" style="width:100%;border-radius:10px;margin:8px 0"><p>CLL evolves stepwise from HSC genetic/epigenetic lesions through polyclonal B-cell expansion, oligoclonal selection, MBL, and finally overt CLL.</p></div>
+<div class="card"><h4>Fig 2 &mdash; Blood Film: Typical CLL</h4><img src="images/2.png" alt="CLL blood film showing small mature lymphocytes and smudge cells" style="width:100%;border-radius:10px;margin:8px 0"><p>Small mature lymphocytes with scanty cytoplasm and smudge cells (Gumprecht cells).</p></div>
+<div class="card"><h4>Fig 3 &mdash; Transforming CLL</h4><img src="images/3.png" alt="CLL with increased prolymphocytes" style="width:100%;border-radius:10px;margin:8px 0"><p>Increased prolymphocytes (&gt;15%) signals accelerated/transforming CLL. Dual population of small lymphocytes and larger nucleolated cells.</p></div>
+<div class="card"><h4>Fig 4 &mdash; Polyclonal B-cell Lymphocytosis</h4><img src="images/4.png" alt="Binucleated lymphocytes in polyclonal B-cell lymphocytosis" style="width:100%;border-radius:10px;margin:8px 0"><p>Binucleated lymphocytes characteristic of persistent polyclonal B-cell lymphocytosis (a benign mimic).</p></div>
+<div class="card"><h4>Fig 5 &mdash; Richter Syndrome</h4><img src="images/5.png" alt="Large blast cells of Richter transformation" style="width:100%;border-radius:10px;margin:8px 0"><p>Large blast-like atypical cells corresponding to Richter syndrome with blood involvement.</p></div>
+<div class="card"><h4>Fig 6 &mdash; Treatment Algorithm</h4><img src="images/6.png" alt="CLL treatment algorithm flowchart" style="width:100%;border-radius:10px;margin:8px 0"><p>Treatment pathway integrates disease activity criteria, biology (IGHV/TP53), and patient fitness.</p></div>
+<div class="card"><h4>Fig 6a &mdash; Rai/Binet Staging</h4><img src="images/6a.png" alt="Rai and Binet staging table" style="width:100%;border-radius:10px;margin:8px 0"><p>Clinical staging systems for CLL prognosis and treatment planning.</p></div>
+<div class="card"><h4>Fig 7 &mdash; SMZL Blood Film</h4><img src="images/7.png" alt="Villous lymphocytes in SMZL" style="width:100%;border-radius:10px;margin:8px 0"><p>Villous lymphocytes supporting SMZL pattern on blood film.</p></div>
+<div class="card"><h4>Fig 8 &mdash; Hairy Cell Leukaemia</h4><img src="images/8.png" alt="Hairy cells with fine cytoplasmic projections" style="width:100%;border-radius:10px;margin:8px 0"><p>Typical hairy cells with fine cytoplasmic projections supporting HCL diagnosis.</p></div>
+<div class="card"><h4>Fig 9 &mdash; BM Trephine in HCL</h4><img src="images/9.png" alt="Bone marrow trephine showing HCL infiltration" style="width:100%;border-radius:10px;margin:8px 0"><p>Marrow trephine showing classic clear-zone (fried egg) infiltration pattern.</p></div>
+<div class="card"><h4>Fig 10 &mdash; BM Trephine HCL (Paraffin)</h4><img src="images/10.png" alt="BM trephine HCL paraffin section" style="width:100%;border-radius:10px;margin:8px 0"><p>Paraffin section reinforcing HCL diagnosis with diffuse marrow involvement.</p></div>
+<div class="card"><h4>Fig 11 &mdash; Mantle Cell Lymphoma</h4><img src="images/11.png" alt="Leukaemic MCL cells on blood film" style="width:100%;border-radius:10px;margin:8px 0"><p>Leukaemic MCL cells can mimic CLL morphologically but differ biologically (Cyclin D1+, t(11;14)).</p></div>
+<div class="card"><h4>Fig 12 &mdash; Follicular Lymphoma</h4><img src="images/12.png" alt="Follicular lymphoma leukaemic phase blood film" style="width:100%;border-radius:10px;margin:8px 0"><p>Cleaved nuclei and centrocyte morphology supporting follicular lymphoma leukaemic spillover.</p></div>
+<div class="card"><h4>Fig 13 &mdash; HCL Variant</h4><img src="images/13.png" alt="Splenic B-cell lymphoma with prominent nucleoli" style="width:100%;border-radius:10px;margin:8px 0"><p>Nucleolated villous cells suggesting splenic B-cell lymphoma/leukaemia with prominent nucleoli (HCL variant).</p></div>
 </div>
 </section>
 
@@ -615,6 +956,8 @@ details[open] summary{margin-bottom:10px}
 <div class="quiz-tabs">
 <button class="quiz-tab active" id="tabMCQ" onclick="switchTab('mcq')">MCQ (20)</button>
 <button class="quiz-tab" id="tabEMQ" onclick="switchTab('emq')">EMQ (20)</button>
+<button class="quiz-tab" id="tabVMCQ" onclick="switchTab('vmcq')">Vignette MCQ (15)</button>
+<button class="quiz-tab" id="tabVEMQ" onclick="switchTab('vemq')">Vignette EMQ (10)</button>
 </div>
 <div class="quiz-progress"><div class="quiz-progress-bar" id="progressBar" style="width:0%"></div></div>
 <div id="quizContainer"></div>
@@ -624,6 +967,8 @@ details[open] summary{margin-bottom:10px}
 <div class="results-grid">
 <div class="results-stat"><div class="label">MCQ</div><div class="value" id="resMCQ">0%</div></div>
 <div class="results-stat"><div class="label">EMQ</div><div class="value" id="resEMQ">0%</div></div>
+<div class="results-stat"><div class="label">Vignette MCQ</div><div class="value" id="resVMCQ">0%</div></div>
+<div class="results-stat"><div class="label">Vignette EMQ</div><div class="value" id="resVEMQ">0%</div></div>
 <div class="results-stat"><div class="label">Overall</div><div class="value" id="resOverall">0%</div></div>
 </div>
 <div id="resGuidance" style="text-align:left;padding:14px;border-radius:12px;background:var(--bg-ivory);margin-top:14px;display:none"></div>
@@ -695,7 +1040,36 @@ details[open] summary{margin-bottom:10px}
 
 <script>
 // === QUIZ BANK ===
-const QUIZ_BANK={mcq:[{id:"m1",type:"mcq",stem:"A patient has persistent monoclonal B-lymphocytosis of 6 \u00d7 10\u2079/L for 4 months with typical CLL phenotype and no tissue biopsy. Most appropriate diagnosis?",options:["MBL","CLL","SLL","LPL"],correctIndex:1,rationale:"CLL requires \u22655 \u00d7 10\u2079/L clonal B cells in blood for \u22653 months with compatible phenotype.",topic:"Diagnosis",difficulty:"easy"},{id:"m2",type:"mcq",stem:"Which immunophenotype is most consistent with typical CLL?",options:["CD5\u2212, CD23\u2212, strong SmIg","CD5+, CD23+, CD200+, weak SmIg/CD20","CD10+, BCL6+, CD5\u2212","CD103+, CD123+, Annexin A1+"],correctIndex:1,rationale:"Typical CLL co-expresses CD5 and CD23 with weak surface immunoglobulin and CD20, often CD200+.",topic:"Immunophenotype",difficulty:"easy"},{id:"m3",type:"mcq",stem:"Which genetic profile most strongly predicts poor response to chemoimmunotherapy?",options:["Isolated del(13q)","Trisomy 12 alone","del(17p)/TP53 disruption","Mutated IGHV only"],correctIndex:2,rationale:"TP53 pathway disruption is the key marker of poor CIT response and guides pathway inhibitor use.",topic:"Predictive biomarkers",difficulty:"medium"},{id:"m4",type:"mcq",stem:"In CLL, unmutated IGHV status generally indicates:",options:["More indolent biology","Better CIT outcomes","More aggressive clinical behaviour","No prognostic relevance"],correctIndex:2,rationale:"IGHV-unmutated disease tends toward faster progression and historically inferior CIT outcomes.",topic:"Prognosis",difficulty:"easy"},{id:"m5",type:"mcq",stem:"Which feature alone is NOT a treatment-start criterion in otherwise stable CLL?",options:["Hb <110 g/L from marrow failure","Progressive symptomatic splenomegaly","High WBC count without other active-disease features","B symptoms"],correctIndex:2,rationale:"High leukocyte count by itself usually does not justify treatment initiation.",topic:"Treatment criteria",difficulty:"easy"},{id:"m6",type:"mcq",stem:"A CLL patient on BTKi develops transient rising lymphocyte count but improving nodes and symptoms. Best interpretation?",options:["Definite progression","Expected redistribution effect","Richter transformation","Autoimmune flare"],correctIndex:1,rationale:"BTKi can cause temporary blood lymphocytosis due to tissue redistribution.",topic:"Treatment monitoring",difficulty:"medium"},{id:"m7",type:"mcq",stem:"In suspected Richter transformation, the most urgent next step is:",options:["Increase steroid dose only","Start empiric chlorambucil","Tissue biopsy from metabolically active site","Repeat CBC in 3 months"],correctIndex:2,rationale:"Transformation requires histologic confirmation; PET/CT helps identify the best biopsy site.",topic:"Complications",difficulty:"medium"},{id:"m8",type:"mcq",stem:"AIHA in CLL is most likely when anaemia is accompanied by:",options:["Low LDH and high haptoglobin","Elevated LDH and positive DAT","Normal smear and DAT negative","Isolated neutropenia only"],correctIndex:1,rationale:"A haemolytic profile with DAT positivity strongly supports AIHA.",topic:"Autoimmune cytopenias",difficulty:"easy"},{id:"m9",type:"mcq",stem:"Which first-line approach is standard for most asymptomatic early CLL?",options:["Immediate CIT","Immediate BTKi for all","Active surveillance","Splenectomy"],correctIndex:2,rationale:"Early asymptomatic disease is managed with watchful waiting.",topic:"Treatment strategy",difficulty:"easy"},{id:"m10",type:"mcq",stem:"A major toxicity profile classically associated with ibrutinib includes:",options:["Severe neuropathy only","Atrial fibrillation, hypertension, bleeding","Hyperpigmentation only","Isolated nephrotoxicity only"],correctIndex:1,rationale:"Cardiovascular and bleeding toxicities are key class effects.",topic:"Targeted therapy",difficulty:"easy"},{id:"m11",type:"mcq",stem:"Why is venetoclax dose ramp-up required?",options:["To prevent cytokine storm","To prevent tumour lysis syndrome","To reduce neuropathy","To improve oral absorption only"],correctIndex:1,rationale:"Gradual escalation reduces tumour lysis risk.",topic:"Targeted therapy",difficulty:"easy"},{id:"m12",type:"mcq",stem:"Which statement best fits isolated del(13q) in CLL?",options:["Universally refractory disease","Generally favourable prognostic pattern","Indicates Hodgkin transformation","Contraindicates all targeted agents"],correctIndex:1,rationale:"Isolated del(13q) is usually linked with more favourable biology.",topic:"Prognosis",difficulty:"easy"},{id:"m13",type:"mcq",stem:"Which marker combination most supports classical HCL?",options:["CD5+, CD23+, Cyclin D1+","CD11c+, CD25+, CD103+, CD123+, BRAF V600E","CD10+, BCL6+, t(14;18)","CD5+, CD23\u2212, SOX11+"],correctIndex:1,rationale:"Classical HCL has a characteristic marker profile and near-universal BRAF V600E.",topic:"HCL",difficulty:"medium"},{id:"m14",type:"mcq",stem:"Standard front-line therapy for most active classical HCL cases is:",options:["Chlorambucil monotherapy","Purine analogue (cladribine or pentostatin)","Splenectomy first in all","Immediate allo-HSCT"],correctIndex:1,rationale:"Purine analogues provide high and durable responses.",topic:"HCL treatment",difficulty:"easy"},{id:"m15",type:"mcq",stem:"Which feature favours splenic B-cell lymphoma/leukaemia with prominent nucleoli over classical HCL?",options:["Universal BRAF V600E","CD25 negativity and no BRAF V600E","Frequent monocytopenia","Dry tap in almost all cases"],correctIndex:1,rationale:"The variant form typically lacks CD25 and BRAF V600E.",topic:"HCL variant",difficulty:"medium"},{id:"m16",type:"mcq",stem:"In SMZL, which pattern is most characteristic?",options:["CD103 and CD123 co-expression in all cases","Intrasinusoidal marrow infiltration with villous lymphocytes","Cyclin D1 overexpression from t(11;14)","No splenic involvement"],correctIndex:1,rationale:"SMZL often shows villous lymphocytes and intrasinusoidal marrow involvement.",topic:"SMZL",difficulty:"medium"},{id:"m17",type:"mcq",stem:"Which finding helps distinguish non-nodal leukaemic MCL from typical CLL?",options:["Consistent CD23 bright positivity","Cyclin D1 expression and t(11;14)","Frequent smudge cells only","Universal CD200 positivity"],correctIndex:1,rationale:"Cyclin D1 and t(11;14) are central discriminatory markers for MCL.",topic:"MCL differential",difficulty:"medium"},{id:"m18",type:"mcq",stem:"Which statement about MBL is most accurate?",options:["Always requires immediate therapy","Defined by \u22655 \u00d7 10\u2079/L clonal B cells","Usually monitored; progression risk exists but is limited","Equivalent to aggressive lymphoma"],correctIndex:2,rationale:"MBL is a precursor state; monitoring is standard unless progression occurs.",topic:"MBL",difficulty:"easy"},{id:"m19",type:"mcq",stem:"A CLL patient with refractory autoimmune cytopenia despite standard immune therapy should next be considered for:",options:["Observation only","Anti-CLL directed therapy","Antibiotics alone","Immediate splenectomy in all cases"],correctIndex:1,rationale:"Refractory autoimmune cytopenia is an accepted trigger for anti-CLL therapy.",topic:"Autoimmune cytopenias",difficulty:"medium"},{id:"m20",type:"mcq",stem:"Which is true about response categories in CLL trials?",options:["MRD status has no clinical value","CR with undetectable MRD tends to have better outcomes","PR requires normal marrow biopsy","Stable disease means all symptoms resolved"],correctIndex:1,rationale:"uMRD CR generally correlates with deeper response quality and better outcomes.",topic:"Response assessment",difficulty:"medium"}],emq:[{id:"e1",type:"emq",stem:"Clonal B cells 3 \u00d7 10\u2079/L, no adenopathy, no organomegaly, no symptoms.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:2,rationale:"Below 5 \u00d7 10\u2079/L clonal B cells without disease features supports MBL.",topic:"Diagnostic classification",difficulty:"easy"},{id:"e2",type:"emq",stem:"Typical CLL phenotype with clonal B cells 8 \u00d7 10\u2079/L for 4 months.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:0,rationale:"Meets blood count and duration threshold for CLL.",topic:"Diagnostic classification",difficulty:"easy"},{id:"e3",type:"emq",stem:"Tissue-dominant disease with CLL phenotype but blood clonal B cells <5 \u00d7 10\u2079/L.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:1,rationale:"SLL represents tissue-dominant disease within the same biologic spectrum.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e4",type:"emq",stem:"Villous lymphocytes, splenomegaly, intrasinusoidal marrow pattern, CD11c+, CD103\u2212.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:3,rationale:"This profile is classic for SMZL.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e5",type:"emq",stem:"Cyclin D1 positivity with t(11;14) in a leukaemic presentation.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:5,rationale:"t(11;14) with cyclin D1 is strongly supportive of MCL.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e6",type:"emq",stem:"Biomarker most linked with CIT resistance and pathway-inhibitor preference.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:1,rationale:"TP53 disruption drives major resistance to CIT.",topic:"Predictive markers",difficulty:"easy"},{id:"e7",type:"emq",stem:"Pattern more often associated with indolent biology and longer treatment-free interval.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:3,rationale:"Mutated IGHV generally indicates slower disease behaviour.",topic:"Prognosis",difficulty:"easy"},{id:"e8",type:"emq",stem:"Marker associated with aggressive disease kinetics and quicker need for treatment.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:6,rationale:"Short LDT indicates rapid clonal expansion.",topic:"Prognosis",difficulty:"medium"},{id:"e9",type:"emq",stem:"Mutation linked to clinical resistance during BTKi therapy.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:8,rationale:"BTK pathway mutations are a known mechanism of BTKi resistance.",topic:"Relapse biology",difficulty:"hard"},{id:"e10",type:"emq",stem:"Mutation pattern associated with resistance during venetoclax therapy.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:9,rationale:"Acquired BCL2 resistance mutations can drive venetoclax failure.",topic:"Relapse biology",difficulty:"hard"},{id:"e11",type:"emq",stem:"Sudden anaemia, high LDH, low haptoglobin, DAT positive.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:0,rationale:"This haemolytic pattern supports AIHA.",topic:"Complications",difficulty:"easy"},{id:"e12",type:"emq",stem:"CLL with severe isolated thrombocytopenia, marrow megakaryocytes preserved.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:1,rationale:"Pattern is consistent with immune thrombocytopenia.",topic:"Complications",difficulty:"medium"},{id:"e13",type:"emq",stem:"AIHA plus immune thrombocytopenia occurring together.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:7,rationale:"Combined AIHA and ITP defines Evans syndrome.",topic:"Complications",difficulty:"easy"},{id:"e14",type:"emq",stem:"Rapid clinical deterioration, rising LDH, aggressive DLBCL clone with poor prognosis.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:3,rationale:"Clonally related Richter transformation is typically high risk.",topic:"Complications",difficulty:"hard"},{id:"e15",type:"emq",stem:"Rising lymphocyte count soon after BTKi initiation despite improving nodes.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:5,rationale:"This is expected redistribution, not immediate progression.",topic:"Treatment monitoring",difficulty:"medium"},{id:"e16",type:"emq",stem:"Newly diagnosed asymptomatic early CLL without active disease criteria.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:0,rationale:"Observation is standard when no treatment trigger is present.",topic:"Treatment selection",difficulty:"easy"},{id:"e17",type:"emq",stem:"Fit younger patient with favourable biology where CIT is still selectively considered.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:3,rationale:"FCR may remain an option in selected younger fit patients.",topic:"Treatment selection",difficulty:"medium"},{id:"e18",type:"emq",stem:"CLL relapse after one pathway-inhibitor class with renewed treatment indication.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:2,rationale:"Class-switch strategy is core in relapsed disease management.",topic:"Relapsed CLL",difficulty:"hard"},{id:"e19",type:"emq",stem:"Classical HCL with treatment indication and no major contraindication.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:6,rationale:"Purine analogues are standard front-line for active classical HCL.",topic:"HCL treatment",difficulty:"easy"},{id:"e20",type:"emq",stem:"Suspected Richter transformation based on abrupt clinical shift and high LDH.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:9,rationale:"Histologic confirmation by tissue biopsy is essential.",topic:"Complications",difficulty:"medium"}]};
+const QUIZ_BANK={mcq:[{id:"m1",type:"mcq",stem:"A patient has persistent monoclonal B-lymphocytosis of 6 \u00d7 10\u2079/L for 4 months with typical CLL phenotype and no tissue biopsy. Most appropriate diagnosis?",options:["MBL","CLL","SLL","LPL"],correctIndex:1,rationale:"CLL requires \u22655 \u00d7 10\u2079/L clonal B cells in blood for \u22653 months with compatible phenotype.",topic:"Diagnosis",difficulty:"easy"},{id:"m2",type:"mcq",stem:"Which immunophenotype is most consistent with typical CLL?",options:["CD5\u2212, CD23\u2212, strong SmIg","CD5+, CD23+, CD200+, weak SmIg/CD20","CD10+, BCL6+, CD5\u2212","CD103+, CD123+, Annexin A1+"],correctIndex:1,rationale:"Typical CLL co-expresses CD5 and CD23 with weak surface immunoglobulin and CD20, often CD200+.",topic:"Immunophenotype",difficulty:"easy"},{id:"m3",type:"mcq",stem:"Which genetic profile most strongly predicts poor response to chemoimmunotherapy?",options:["Isolated del(13q)","Trisomy 12 alone","del(17p)/TP53 disruption","Mutated IGHV only"],correctIndex:2,rationale:"TP53 pathway disruption is the key marker of poor CIT response and guides pathway inhibitor use.",topic:"Predictive biomarkers",difficulty:"medium"},{id:"m4",type:"mcq",stem:"In CLL, unmutated IGHV status generally indicates:",options:["More indolent biology","Better CIT outcomes","More aggressive clinical behaviour","No prognostic relevance"],correctIndex:2,rationale:"IGHV-unmutated disease tends toward faster progression and historically inferior CIT outcomes.",topic:"Prognosis",difficulty:"easy"},{id:"m5",type:"mcq",stem:"Which feature alone is NOT a treatment-start criterion in otherwise stable CLL?",options:["Hb <110 g/L from marrow failure","Progressive symptomatic splenomegaly","High WBC count without other active-disease features","B symptoms"],correctIndex:2,rationale:"High leukocyte count by itself usually does not justify treatment initiation.",topic:"Treatment criteria",difficulty:"easy"},{id:"m6",type:"mcq",stem:"A CLL patient on BTKi develops transient rising lymphocyte count but improving nodes and symptoms. Best interpretation?",options:["Definite progression","Expected redistribution effect","Richter transformation","Autoimmune flare"],correctIndex:1,rationale:"BTKi can cause temporary blood lymphocytosis due to tissue redistribution.",topic:"Treatment monitoring",difficulty:"medium"},{id:"m7",type:"mcq",stem:"In suspected Richter transformation, the most urgent next step is:",options:["Increase steroid dose only","Start empiric chlorambucil","Tissue biopsy from metabolically active site","Repeat CBC in 3 months"],correctIndex:2,rationale:"Transformation requires histologic confirmation; PET/CT helps identify the best biopsy site.",topic:"Complications",difficulty:"medium"},{id:"m8",type:"mcq",stem:"AIHA in CLL is most likely when anaemia is accompanied by:",options:["Low LDH and high haptoglobin","Elevated LDH and positive DAT","Normal smear and DAT negative","Isolated neutropenia only"],correctIndex:1,rationale:"A haemolytic profile with DAT positivity strongly supports AIHA.",topic:"Autoimmune cytopenias",difficulty:"easy"},{id:"m9",type:"mcq",stem:"Which first-line approach is standard for most asymptomatic early CLL?",options:["Immediate CIT","Immediate BTKi for all","Active surveillance","Splenectomy"],correctIndex:2,rationale:"Early asymptomatic disease is managed with watchful waiting.",topic:"Treatment strategy",difficulty:"easy"},{id:"m10",type:"mcq",stem:"A major toxicity profile classically associated with ibrutinib includes:",options:["Severe neuropathy only","Atrial fibrillation, hypertension, bleeding","Hyperpigmentation only","Isolated nephrotoxicity only"],correctIndex:1,rationale:"Cardiovascular and bleeding toxicities are key class effects.",topic:"Targeted therapy",difficulty:"easy"},{id:"m11",type:"mcq",stem:"Why is venetoclax dose ramp-up required?",options:["To prevent cytokine storm","To prevent tumour lysis syndrome","To reduce neuropathy","To improve oral absorption only"],correctIndex:1,rationale:"Gradual escalation reduces tumour lysis risk.",topic:"Targeted therapy",difficulty:"easy"},{id:"m12",type:"mcq",stem:"Which statement best fits isolated del(13q) in CLL?",options:["Universally refractory disease","Generally favourable prognostic pattern","Indicates Hodgkin transformation","Contraindicates all targeted agents"],correctIndex:1,rationale:"Isolated del(13q) is usually linked with more favourable biology.",topic:"Prognosis",difficulty:"easy"},{id:"m13",type:"mcq",stem:"Which marker combination most supports classical HCL?",options:["CD5+, CD23+, Cyclin D1+","CD11c+, CD25+, CD103+, CD123+, BRAF V600E","CD10+, BCL6+, t(14;18)","CD5+, CD23\u2212, SOX11+"],correctIndex:1,rationale:"Classical HCL has a characteristic marker profile and near-universal BRAF V600E.",topic:"HCL",difficulty:"medium"},{id:"m14",type:"mcq",stem:"Standard front-line therapy for most active classical HCL cases is:",options:["Chlorambucil monotherapy","Purine analogue (cladribine or pentostatin)","Splenectomy first in all","Immediate allo-HSCT"],correctIndex:1,rationale:"Purine analogues provide high and durable responses.",topic:"HCL treatment",difficulty:"easy"},{id:"m15",type:"mcq",stem:"Which feature favours splenic B-cell lymphoma/leukaemia with prominent nucleoli over classical HCL?",options:["Universal BRAF V600E","CD25 negativity and no BRAF V600E","Frequent monocytopenia","Dry tap in almost all cases"],correctIndex:1,rationale:"The variant form typically lacks CD25 and BRAF V600E.",topic:"HCL variant",difficulty:"medium"},{id:"m16",type:"mcq",stem:"In SMZL, which pattern is most characteristic?",options:["CD103 and CD123 co-expression in all cases","Intrasinusoidal marrow infiltration with villous lymphocytes","Cyclin D1 overexpression from t(11;14)","No splenic involvement"],correctIndex:1,rationale:"SMZL often shows villous lymphocytes and intrasinusoidal marrow involvement.",topic:"SMZL",difficulty:"medium"},{id:"m17",type:"mcq",stem:"Which finding helps distinguish non-nodal leukaemic MCL from typical CLL?",options:["Consistent CD23 bright positivity","Cyclin D1 expression and t(11;14)","Frequent smudge cells only","Universal CD200 positivity"],correctIndex:1,rationale:"Cyclin D1 and t(11;14) are central discriminatory markers for MCL.",topic:"MCL differential",difficulty:"medium"},{id:"m18",type:"mcq",stem:"Which statement about MBL is most accurate?",options:["Always requires immediate therapy","Defined by \u22655 \u00d7 10\u2079/L clonal B cells","Usually monitored; progression risk exists but is limited","Equivalent to aggressive lymphoma"],correctIndex:2,rationale:"MBL is a precursor state; monitoring is standard unless progression occurs.",topic:"MBL",difficulty:"easy"},{id:"m19",type:"mcq",stem:"A CLL patient with refractory autoimmune cytopenia despite standard immune therapy should next be considered for:",options:["Observation only","Anti-CLL directed therapy","Antibiotics alone","Immediate splenectomy in all cases"],correctIndex:1,rationale:"Refractory autoimmune cytopenia is an accepted trigger for anti-CLL therapy.",topic:"Autoimmune cytopenias",difficulty:"medium"},{id:"m20",type:"mcq",stem:"Which is true about response categories in CLL trials?",options:["MRD status has no clinical value","CR with undetectable MRD tends to have better outcomes","PR requires normal marrow biopsy","Stable disease means all symptoms resolved"],correctIndex:1,rationale:"uMRD CR generally correlates with deeper response quality and better outcomes.",topic:"Response assessment",difficulty:"medium"}],emq:[{id:"e1",type:"emq",stem:"Clonal B cells 3 \u00d7 10\u2079/L, no adenopathy, no organomegaly, no symptoms.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:2,rationale:"Below 5 \u00d7 10\u2079/L clonal B cells without disease features supports MBL.",topic:"Diagnostic classification",difficulty:"easy"},{id:"e2",type:"emq",stem:"Typical CLL phenotype with clonal B cells 8 \u00d7 10\u2079/L for 4 months.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:0,rationale:"Meets blood count and duration threshold for CLL.",topic:"Diagnostic classification",difficulty:"easy"},{id:"e3",type:"emq",stem:"Tissue-dominant disease with CLL phenotype but blood clonal B cells <5 \u00d7 10\u2079/L.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:1,rationale:"SLL represents tissue-dominant disease within the same biologic spectrum.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e4",type:"emq",stem:"Villous lymphocytes, splenomegaly, intrasinusoidal marrow pattern, CD11c+, CD103\u2212.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:3,rationale:"This profile is classic for SMZL.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e5",type:"emq",stem:"Cyclin D1 positivity with t(11;14) in a leukaemic presentation.",options:["CLL","SLL","MBL","SMZL","Classical HCL","Non-nodal leukaemic MCL","LPL/WM","Splenic B-cell lymphoma/leukaemia with prominent nucleoli","Follicular lymphoma (leukaemic phase)","SDRPL"],correctIndex:5,rationale:"t(11;14) with cyclin D1 is strongly supportive of MCL.",topic:"Diagnostic classification",difficulty:"medium"},{id:"e6",type:"emq",stem:"Biomarker most linked with CIT resistance and pathway-inhibitor preference.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:1,rationale:"TP53 disruption drives major resistance to CIT.",topic:"Predictive markers",difficulty:"easy"},{id:"e7",type:"emq",stem:"Pattern more often associated with indolent biology and longer treatment-free interval.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:3,rationale:"Mutated IGHV generally indicates slower disease behaviour.",topic:"Prognosis",difficulty:"easy"},{id:"e8",type:"emq",stem:"Marker associated with aggressive disease kinetics and quicker need for treatment.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:6,rationale:"Short LDT indicates rapid clonal expansion.",topic:"Prognosis",difficulty:"medium"},{id:"e9",type:"emq",stem:"Mutation linked to clinical resistance during BTKi therapy.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:8,rationale:"BTK pathway mutations are a known mechanism of BTKi resistance.",topic:"Relapse biology",difficulty:"hard"},{id:"e10",type:"emq",stem:"Mutation pattern associated with resistance during venetoclax therapy.",options:["Isolated del(13q)","del(17p)/TP53 disruption","Unmutated IGHV","Mutated IGHV","Complex karyotype","High beta-2 microglobulin","Short lymphocyte doubling time","NOTCH1 mutation","BTK mutation","BCL2 resistance mutation"],correctIndex:9,rationale:"Acquired BCL2 resistance mutations can drive venetoclax failure.",topic:"Relapse biology",difficulty:"hard"},{id:"e11",type:"emq",stem:"Sudden anaemia, high LDH, low haptoglobin, DAT positive.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:0,rationale:"This haemolytic pattern supports AIHA.",topic:"Complications",difficulty:"easy"},{id:"e12",type:"emq",stem:"CLL with severe isolated thrombocytopenia, marrow megakaryocytes preserved.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:1,rationale:"Pattern is consistent with immune thrombocytopenia.",topic:"Complications",difficulty:"medium"},{id:"e13",type:"emq",stem:"AIHA plus immune thrombocytopenia occurring together.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:7,rationale:"Combined AIHA and ITP defines Evans syndrome.",topic:"Complications",difficulty:"easy"},{id:"e14",type:"emq",stem:"Rapid clinical deterioration, rising LDH, aggressive DLBCL clone with poor prognosis.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:3,rationale:"Clonally related Richter transformation is typically high risk.",topic:"Complications",difficulty:"hard"},{id:"e15",type:"emq",stem:"Rising lymphocyte count soon after BTKi initiation despite improving nodes.",options:["AIHA","ITP","PRCA","Richter transformation (clonally related)","Richter transformation (clonally unrelated)","BTKi redistribution lymphocytosis","Hypogammaglobulinaemia-related infection risk","Evans syndrome","Cold agglutinin disease","Treatment-related marrow toxicity"],correctIndex:5,rationale:"This is expected redistribution, not immediate progression.",topic:"Treatment monitoring",difficulty:"medium"},{id:"e16",type:"emq",stem:"Newly diagnosed asymptomatic early CLL without active disease criteria.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:0,rationale:"Observation is standard when no treatment trigger is present.",topic:"Treatment selection",difficulty:"easy"},{id:"e17",type:"emq",stem:"Fit younger patient with favourable biology where CIT is still selectively considered.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:3,rationale:"FCR may remain an option in selected younger fit patients.",topic:"Treatment selection",difficulty:"medium"},{id:"e18",type:"emq",stem:"CLL relapse after one pathway-inhibitor class with renewed treatment indication.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:2,rationale:"Class-switch strategy is core in relapsed disease management.",topic:"Relapsed CLL",difficulty:"hard"},{id:"e19",type:"emq",stem:"Classical HCL with treatment indication and no major contraindication.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:6,rationale:"Purine analogues are standard front-line for active classical HCL.",topic:"HCL treatment",difficulty:"easy"},{id:"e20",type:"emq",stem:"Suspected Richter transformation based on abrupt clinical shift and high LDH.",options:["Active surveillance","BTKi-based therapy","Venetoclax + anti-CD20","FCR in selected fit younger patient","Chlorambucil palliation (very frail)","Allo-HSCT evaluation","Cladribine/pentostatin","BRAF inhibitor (relapsed HCL)","Rituximab for SMZL","Urgent tissue biopsy"],correctIndex:9,rationale:"Histologic confirmation by tissue biopsy is essential.",topic:"Complications",difficulty:"medium"}],
+vmcq:[
+{id:"cv1",type:"mcq",stem:"A 72-year-old man presents with fatigue and recurrent sinopulmonary infections over 6 months. FBC: WBC 68 \u00d7 10\u2079/L (lymphocytes 62 \u00d7 10\u2079/L), Hb 128 g/L, platelets 185 \u00d7 10\u2079/L. Blood film: small mature lymphocytes, smudge cells. Flow cytometry: CD5+, CD19+, CD23+, CD200+, weak SmIg, FMC7\u2212. FISH: isolated del(13q14). IGHV mutated. Serum IgG 3.2 g/L (normal 6\u201316). No palpable lymphadenopathy. What is the most appropriate next management step?",options:["Start ibrutinib","Start FCR","Active surveillance with IgG monitoring","Immediate venetoclax + obinutuzumab"],correctIndex:2,rationale:"This is Rai stage 0 with mutated IGHV and favourable del(13q). Despite hypogammaglobulinaemia, treatment is only for active/progressive disease. IgG replacement may be considered if recurrent infections worsen, but CLL-directed therapy is not yet indicated.",topic:"Treatment criteria",difficulty:"hard"},
+{id:"cv2",type:"mcq",stem:"A 58-year-old woman with CLL (unmutated IGHV, no TP53 abnormality) started ibrutinib 6 weeks ago for progressive bulky lymphadenopathy. At follow-up, lymph nodes decreased by 40%, spleen non-palpable, but absolute lymphocyte count has risen from 45 to 112 \u00d7 10\u2079/L. She feels well with no B symptoms. What is the most appropriate interpretation?",options:["Treatment failure requiring immediate switch to venetoclax","Richter transformation","Expected pharmacological redistribution lymphocytosis","Laboratory error requiring repeat testing"],correctIndex:2,rationale:"BTK inhibitors mobilise CLL cells from tissue compartments into blood, causing transient lymphocytosis that can persist for months. This is NOT progression \u2014 clinical response is defined by nodal/splenic reduction, not blood counts.",topic:"Treatment monitoring",difficulty:"hard"},
+{id:"cv3",type:"mcq",stem:"A 65-year-old man with CLL (Binet B, unmutated IGHV, 8 years) presents with sudden worsening fatigue, drenching night sweats, 8 kg weight loss in 4 weeks, and rapidly enlarging right cervical node now 7 cm. LDH risen from 210 to 890 U/L. Beta-2 microglobulin 8.4 mg/L. What is the single most important next investigation?",options:["Repeat FISH panel for del(17p)","PET/CT with guided tissue biopsy of the most active node","CT chest/abdomen with 3-month follow-up","Bone marrow aspirate and trephine only"],correctIndex:1,rationale:"The clinical picture strongly suggests Richter transformation: abrupt B symptoms, rapidly enlarging single mass, markedly elevated LDH. PET/CT identifies the most metabolically active site (SUVmax often >5) to guide biopsy for histological confirmation.",topic:"Richter transformation",difficulty:"hard"},
+{id:"cv4",type:"mcq",stem:"A 74-year-old woman with CLL (Rai II) develops progressive anaemia. Hb 78 g/L, reticulocytes 8.2%, LDH 620 U/L, haptoglobin undetectable, bilirubin 42 \u03bcmol/L (unconjugated predominant), DAT strongly positive (IgG + C3d). Platelets 155 \u00d7 10\u2079/L. Film shows spherocytes and polychromasia. What is the most likely diagnosis?",options:["Marrow infiltration by CLL","Pure red cell aplasia","Autoimmune haemolytic anaemia","Microangiopathic haemolytic anaemia"],correctIndex:2,rationale:"Reticulocytosis, elevated LDH, absent haptoglobin, unconjugated hyperbilirubinaemia, positive DAT (IgG+C3d), and spherocytes is diagnostic of warm AIHA (~10% of CLL). PRCA shows low reticulocytes. Marrow infiltration causes hypoproliferative anaemia. MAHA shows schistocytes.",topic:"Autoimmune complications",difficulty:"hard"},
+{id:"cv5",type:"mcq",stem:"A 62-year-old man diagnosed with CLL: WBC 28 \u00d7 10\u2079/L, Hb 142 g/L, platelets 220 \u00d7 10\u2079/L. CLL score 5/5. FISH: del(17p13.1) in 35% of nuclei. TP53 mutation confirmed by NGS. IGHV unmutated. No lymphadenopathy or organomegaly, asymptomatic. What is the most appropriate management?",options:["Immediate ibrutinib","Immediate venetoclax + obinutuzumab","Active surveillance with close monitoring","FCR given his fitness"],correctIndex:2,rationale:"Despite high-risk biology (del(17p)/TP53, unmutated IGHV), treatment is ONLY initiated when active disease criteria are met. This is Rai 0 with no symptoms, cytopenias, or organomegaly. Close monitoring essential given high-risk genetics, but early treatment has not shown benefit. FCR contraindicated with TP53.",topic:"Treatment criteria",difficulty:"hard"},
+{id:"cv6",type:"mcq",stem:"A 55-year-old woman with CLL (mutated IGHV, normal FISH, Binet C with Hb 92 g/L from marrow failure) is being considered for first-line therapy. Fit, ECOG 0, no significant comorbidities, CrCl 95 mL/min. Which treatment option may still be considered in this specific subgroup?",options:["Chlorambucil monotherapy","Bendamustine-rituximab only","FCR (fludarabine, cyclophosphamide, rituximab)","Splenectomy as first-line"],correctIndex:2,rationale:"In fit, young patients with mutated IGHV and no TP53 disruption, FCR remains a legitimate option with potential for long-term remission (60%+ of mutated IGHV patients achieve >10 year remissions). While BTKi/BCL2i are increasingly preferred, FCR is still selectively considered in this favourable subgroup.",topic:"First-line therapy",difficulty:"hard"},
+{id:"cv7",type:"mcq",stem:"A 68-year-old man with CLL (unmutated IGHV) on ibrutinib for 3 years with good response now presents with progressive lymphadenopathy and rising LDH despite continued therapy. Marrow confirms CLL (no transformation). Sequencing reveals BTK C481S mutation. What is the most appropriate next step?",options:["Increase ibrutinib dose to 560 mg twice daily","Switch to venetoclax-based therapy","Add rituximab to ibrutinib","Proceed directly to allo-HSCT"],correctIndex:1,rationale:"BTK C481S is the commonest acquired resistance mechanism to covalent BTKi, disrupting the covalent binding site. Standard approach is class-switch to venetoclax \u00b1 anti-CD20. Dose escalation will not overcome the resistance mutation.",topic:"Relapse management",difficulty:"hard"},
+{id:"cv8",type:"mcq",stem:"A 70-year-old woman presents with pancytopenia: WBC 2.8 \u00d7 10\u2079/L (monocytes 0.1 \u00d7 10\u2079/L \u2014 markedly reduced), Hb 98 g/L, platelets 72 \u00d7 10\u2079/L. Film: lymphoid cells with pale grey cytoplasm and fine hair-like projections. BM aspirate: dry tap. Flow: CD19+, CD11c+, CD25+, CD103+, CD123+, Annexin A1+, CD5\u2212, CD23\u2212. BRAF V600E confirmed. First-line treatment?",options:["Rituximab monotherapy","Cladribine","Ibrutinib","Splenectomy"],correctIndex:1,rationale:"This is classical HCL (pancytopenia with monocytopenia, hairy cells, dry tap, Annexin A1+, BRAF V600E). First-line: purine analogue (cladribine or pentostatin), achieving durable CR in >80%. Splenectomy is historical.",topic:"HCL treatment",difficulty:"hard"},
+{id:"cv9",type:"mcq",stem:"A 75-year-old woman presents with massive splenomegaly (14 cm below costal margin), WBC 18 \u00d7 10\u2079/L with circulating lymphoid cells showing short villous projections. Flow: CD19+, CD11c+, CD5\u2212, CD23\u2212, CD103\u2212, CD25\u2212, BRAF V600E negative. NOTCH2 mutation detected. BM biopsy: intrasinusoidal infiltration. Diagnosis?",options:["Classical HCL","Splenic marginal zone lymphoma","CLL","Follicular lymphoma"],correctIndex:1,rationale:"Villous lymphocytes + massive splenomegaly + intrasinusoidal marrow + CD103\u2212/CD25\u2212/BRAF\u2212 + NOTCH2 mutation is classic SMZL. Classical HCL would have CD103+/CD25+/BRAF+. CLL would be CD5+/CD23+.",topic:"Differential diagnosis",difficulty:"hard"},
+{id:"cv10",type:"mcq",stem:"A 60-year-old man with CLL (Binet A, 2 years) has routine bloods: WBC 32 \u00d7 10\u2079/L, Hb 138 g/L, platelets 195 \u00d7 10\u2079/L. WBC was 18 \u00d7 10\u2079/L 12 months ago and 24 \u00d7 10\u2079/L 6 months ago. No symptoms, no palpable lymphadenopathy, no organomegaly. What is the LDT and does this patient need treatment?",options:["LDT ~12 months \u2014 meets treatment criteria","LDT ~12 months \u2014 borderline, continue close monitoring","LDT ~6 months \u2014 meets treatment criteria","LDT ~24 months \u2014 active surveillance"],correctIndex:1,rationale:"LDT is approximately 12 months (18\u219232 over 12 months). iwCLL guidelines specify LDT <6 months as treatment trigger, or >50% rise in 2 months. LDT of 12 months is borderline \u2014 warrants closer monitoring but does not mandate treatment alone.",topic:"Prognosis and monitoring",difficulty:"hard"},
+{id:"cv11",type:"mcq",stem:"A 64-year-old man starting venetoclax for relapsed CLL. WBC 120 \u00d7 10\u2079/L with bulky 8 cm abdominal lymphadenopathy. Creatinine 98 \u03bcmol/L, urate 480 \u03bcmol/L, potassium 4.8 mmol/L. What is the most critical safety measure?",options:["Immediate full-dose venetoclax 400 mg daily","5-week dose ramp-up with TLS prophylaxis, hydration, and monitoring","Loading dose of 800 mg for 3 days then maintenance","Start with rituximab alone for 2 cycles first"],correctIndex:1,rationale:"Venetoclax causes rapid apoptosis creating high TLS risk with high tumour burden. Mandatory: 5-week ramp-up (20\u219250\u2192100\u2192200\u2192400 mg), aggressive hydration, allopurinol/rasburicase, serial TLS monitoring at 6-8h and 24h post-dose.",topic:"Venetoclax management",difficulty:"hard"},
+{id:"cv12",type:"mcq",stem:"A 52-year-old man presents with lymphocytosis 35 \u00d7 10\u2079/L. Flow: CD5+, CD19+, CD20 bright, CD23\u2212, CD200\u2212, FMC7+, strong SmIg (lambda). CLL score: 1/5. Cytogenetics: t(11;14)(q13;q32). Cyclin D1+. SOX11 negative. No lymphadenopathy, spleen just palpable. Diagnosis?",options:["Typical CLL","Classical HCL","Non-nodal leukaemic mantle cell lymphoma","SMZL"],correctIndex:2,rationale:"Low CLL score (1/5), bright CD20, strong SmIg, CD23\u2212, CD200\u2212, plus t(11;14) and Cyclin D1+ = MCL. SOX11 negativity with leukaemic non-nodal presentation = non-nodal leukaemic MCL \u2014 a more indolent subtype that mimics CLL.",topic:"Differential diagnosis",difficulty:"hard"},
+{id:"cv13",type:"mcq",stem:"A 78-year-old woman with CLL (ibrutinib 2 years) develops new palpitations. ECG: irregularly irregular rhythm 128 bpm, absent P waves. BP 108/72 mmHg, haemodynamically stable. Most important consideration?",options:["Ibrutinib has no cardiac effects; investigate other causes","Likely ibrutinib-associated atrial fibrillation; assess bleeding risk and consider rate control","Stop ibrutinib immediately and switch to chlorambucil","Cardiovert immediately under GA"],correctIndex:1,rationale:"AF occurs in 5\u201316% of ibrutinib patients. Management: rate control (beta-blocker preferred; avoid verapamil/diltiazem due to CYP3A4 interaction), cautious anticoagulation (DOACs, avoid warfarin). Consider switching to more selective BTKi (acalabrutinib/zanubrutinib).",topic:"BTKi toxicity",difficulty:"hard"},
+{id:"cv14",type:"mcq",stem:"A 66-year-old man with CLL (Binet B) is being considered for obinutuzumab. Before starting treatment, which screening test is most critical to prevent a potentially fatal complication?",options:["HIV serology only","Hepatitis B surface antigen, anti-HBs, and anti-HBc","Tuberculosis IGRA only","CMV PCR only"],correctIndex:1,rationale:"Anti-CD20 antibodies cause profound B-cell depletion and can trigger fulminant HBV reactivation \u2014 even with resolved infection (HBsAg\u2212/anti-HBc+). Full HBV screening mandatory before ANY anti-CD20 therapy. Positive patients need antiviral prophylaxis for \u226512 months after treatment.",topic:"Supportive care",difficulty:"hard"},
+{id:"cv15",type:"mcq",stem:"A 45-year-old woman presents with lymphocytosis 4.2 \u00d7 10\u2079/L (clonal B cells 3.8 \u00d7 10\u2079/L). Flow: CD5+, CD19+, CD23+, CLL score 5/5. No lymphadenopathy on CT, no organomegaly, no cytopenias, no symptoms. IGHV mutated, normal FISH. Diagnosis and approximate risk of progression to CLL requiring treatment?",options:["CLL \u2014 immediate treatment needed","Low-count MBL \u2014 ~1% per year progression to CLL needing treatment","High-count MBL \u2014 ~1-2% per year progression","SLL \u2014 tissue biopsy required"],correctIndex:2,rationale:"Clonal B cells <5 \u00d7 10\u2079/L with CLL phenotype and no tissue disease = MBL. This is high-count MBL (0.5\u20135 \u00d7 10\u2079/L) with ~1\u20132% per year progression risk. Regular monitoring (6\u201312 months) recommended, no treatment indicated.",topic:"MBL prognosis",difficulty:"hard"}
+],
+vemq:[
+{id:"ce1",type:"emq",stem:"A 71-year-old man with CLL (unmutated IGHV, del(11q)) on ibrutinib 4 years. Progressive lymphadenopathy despite compliance. Sequencing: BTK C481S and PLC\u03b32 mutations. ECOG 0, no TP53 abnormality. Most appropriate next treatment?",options:["Venetoclax + rituximab (fixed duration)","Continue ibrutinib higher dose","Acalabrutinib (same class switch)","FCR salvage","Idelalisib + rituximab","Chlorambucil + obinutuzumab","Allo-HSCT as immediate next step","CAR-T cell therapy","Radiotherapy to bulky sites","Observation only"],correctIndex:0,rationale:"After covalent BTKi failure with C481S/PLC\u03b32 mutations, class-switch to venetoclax is standard. Another covalent BTKi would fail due to shared resistance mechanism.",topic:"Relapse management",difficulty:"hard"},
+{id:"ce2",type:"emq",stem:"A 69-year-old woman with CLL (mutated IGHV, isolated del(13q), Binet C, Hb 94 g/L from marrow failure). Well-controlled hypertension, ECOG 1, CrCl 78 mL/min. Most appropriate first-line treatment?",options:["Venetoclax + obinutuzumab (fixed duration)","Ibrutinib continuous","Acalabrutinib + obinutuzumab","FCR","Bendamustine + rituximab","Chlorambucil + obinutuzumab","Allo-HSCT","CAR-T cell therapy","Radiotherapy","Observation only"],correctIndex:0,rationale:"For older fit patients with mutated IGHV requiring first-line treatment, venetoclax + obinutuzumab offers fixed-duration (12 months) with deep responses and uMRD >75%. Avoids continuous BTKi cardiovascular toxicity.",topic:"First-line treatment",difficulty:"hard"},
+{id:"ce3",type:"emq",stem:"A 73-year-old man with CLL develops severe AIHA: Hb 62 g/L, reticulocytes 12%, DAT positive. Prednisolone 1 mg/kg for 3 weeks, Hb only 72 g/L with ongoing haemolysis. Next best step?",options:["Rituximab","Ibrutinib for CLL","Splenectomy","Cyclosporine","Mycophenolate mofetil","Danazol","Red cell exchange","IV immunoglobulin","Plasma exchange","Continue steroids"],correctIndex:0,rationale:"Steroid-refractory warm AIHA in CLL: standard escalation is rituximab (375 mg/m\u00b2 weekly \u00d7 4), achieving 70\u201380% responses. If refractory, CLL-directed therapy (BTKi/venetoclax) is then considered.",topic:"AIHA management",difficulty:"hard"},
+{id:"ce4",type:"emq",stem:"A 55-year-old man with classical HCL (BRAF V600E+). Achieved CR with cladribine 2 years ago. Now relapses with same features (pancytopenia, hairy cells, dry tap). Most appropriate treatment?",options:["Repeat cladribine","Vemurafenib + rituximab","Pentostatin","Ibrutinib","Rituximab monotherapy","Splenectomy","Interferon-alpha","Bendamustine + rituximab","Venetoclax","Observation"],correctIndex:1,rationale:"For relapsed classical HCL (BRAF V600E+), vemurafenib + rituximab achieves CR >85% and MRD negativity. This targeted combination is preferred over repeat purine analogue for more durable responses.",topic:"HCL relapse",difficulty:"hard"},
+{id:"ce5",type:"emq",stem:"A 60-year-old woman with lymphocytosis. CLL score 2/5. Cytogenetics: t(11;14). Cyclin D1+, SOX11+. CT: generalised lymphadenopathy with largest mesenteric node 4 cm. Most likely diagnosis?",options:["CLL","Non-nodal leukaemic MCL","Classical (nodal) MCL","HCL","SMZL","Follicular lymphoma","LPL/WM","SDRPL","DLBCL","Prolymphocytic leukaemia"],correctIndex:2,rationale:"CLL score 2/5, t(11;14), Cyclin D1+, SOX11+ with significant lymphadenopathy = classical nodal MCL. Non-nodal leukaemic MCL would be SOX11\u2212, CD200+, without significant nodes.",topic:"MCL subtyping",difficulty:"hard"},
+{id:"ce6",type:"emq",stem:"A 48-year-old woman with CLL (unmutated IGHV, TP53 mutated, complex karyotype) completed venetoclax + obinutuzumab achieving uMRD CR. Relapsed 18 months after stopping. Fit, no comorbidities. Most appropriate next step?",options:["Re-treat venetoclax + obinutuzumab","BTKi (ibrutinib or zanubrutinib)","FCR","Allo-HSCT directly","Chlorambucil + obinutuzumab","Rituximab monotherapy","CAR-T cell therapy","Observation","Bendamustine-rituximab","Radiotherapy"],correctIndex:1,rationale:"After venetoclax first-line, class-switch to BTKi is standard. Especially in high-risk (TP53/complex karyotype) patients, sequential therapy approach is preferred. Allo-HSCT may be considered later if both classes exhausted.",topic:"Sequential therapy",difficulty:"hard"},
+{id:"ce7",type:"emq",stem:"A 67-year-old man with CLL on ibrutinib 18 months develops easy bruising, epistaxis, large subcutaneous haematoma after minor trauma. Platelets 165 \u00d7 10\u2079/L, PT and APTT normal. No anticoagulants used. Most likely explanation?",options:["Immune thrombocytopenia","Ibrutinib-related platelet dysfunction","von Willebrand disease","DIC","Acquired haemophilia","Vitamin K deficiency","Liver failure","TTP","HIT","Factor XIII deficiency"],correctIndex:1,rationale:"Ibrutinib inhibits BTK and TEC family kinases in platelets, impairing collagen-mediated aggregation causing qualitative defect independent of count. Most common bleeding mechanism; avoid warfarin and dual antiplatelet therapy.",topic:"BTKi adverse effects",difficulty:"hard"},
+{id:"ce8",type:"emq",stem:"A 63-year-old woman: WBC 12 \u00d7 10\u2079/L with cleaved nuclei (centrocytes/centroblasts). Flow: CD19+, CD10+, BCL6+, CD5\u2212, CD23 weak. FISH: t(14;18)(q32;q21). BM biopsy: paratrabecular lymphoid aggregates. CT: widespread small lymphadenopathy. Diagnosis?",options:["CLL","SMZL","Classical HCL","Non-nodal leukaemic MCL","Follicular lymphoma (leukaemic phase)","LPL/WM","Prolymphocytic leukaemia","DLBCL","Burkitt lymphoma","SDRPL"],correctIndex:4,rationale:"CD10+, BCL6+, t(14;18), cleaved nuclei, paratrabecular marrow infiltration, CD5\u2212/CD23 weak = follicular lymphoma with leukaemic spillover. Paratrabecular pattern is characteristic (CLL is interstitial/diffuse).",topic:"Differential diagnosis",difficulty:"hard"},
+{id:"ce9",type:"emq",stem:"A 70-year-old man with CLL (Binet A, mutated IGHV, no treatment) develops herpes zoster (two dermatomes). IgG 4.8 g/L. Two pneumonia episodes requiring hospitalisation in the past year. Most appropriate supportive measure?",options:["Prophylactic aciclovir only","Immunoglobulin replacement therapy","Start CLL-directed therapy","Pneumococcal vaccination only","Prophylactic co-trimoxazole","IV rituximab","Thalidomide","G-CSF prophylaxis","Tonsillectomy","No action needed"],correctIndex:1,rationale:"Symptomatic hypogammaglobulinaemia (IgG 4.8 g/L + recurrent serious infections) warrants IgG replacement (IVIg/SCIg). Target IgG trough >5 g/L. CLL therapy not indicated (Binet A, no active disease).",topic:"Supportive care",difficulty:"hard"},
+{id:"ce10",type:"emq",stem:"A 76-year-old man with CLL (10 years, active surveillance, Binet A) has routine skin check revealing a 2 cm firm violaceous forearm nodule. Biopsy: Merkel cell carcinoma. CLL is stable. How should this be contextualised?",options:["Coincidental finding","CLL patients have substantially increased Merkel cell carcinoma risk","Merkel cell carcinoma causes CLL","Richter transformation as skin disease","CLL skin infiltration","Drug reaction from CLL therapy","Metastatic DLBCL to skin","Secondary MDS","EBV-related LPD","Squamous cell carcinoma misdiagnosed"],correctIndex:1,rationale:"CLL patients have 5\u201310 fold increased Merkel cell carcinoma risk due to chronic immune dysregulation. CLL has 10\u201315% rate of second malignancies. Requires standard oncological management independent of CLL.",topic:"Second malignancies",difficulty:"hard"}
+]};
 
 // === QUIZ ENGINE ===
 let currentTab='mcq',attempt=null;
@@ -704,15 +1078,11 @@ const letters='ABCDEFGHIJ';
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
 function buildAttempt(){
-const mcq=shuffle(QUIZ_BANK.mcq.map(q=>{
+function shuffleQ(bank){return shuffle(bank.map(q=>{
 const idx=q.options.map((_,i)=>i);const si=shuffle(idx);
 return{...q,options:si.map(i=>q.options[i]),correctIndex:si.indexOf(q.correctIndex)};
-}));
-const emq=shuffle(QUIZ_BANK.emq.map(q=>{
-const idx=q.options.map((_,i)=>i);const si=shuffle(idx);
-return{...q,options:si.map(i=>q.options[i]),correctIndex:si.indexOf(q.correctIndex)};
-}));
-return{id:crypto.randomUUID(),start:new Date().toISOString(),mcq,emq,answers:{},finished:false};
+}));}
+return{id:crypto.randomUUID(),start:new Date().toISOString(),mcq:shuffleQ(QUIZ_BANK.mcq),emq:shuffleQ(QUIZ_BANK.emq),vmcq:shuffleQ(QUIZ_BANK.vmcq),vemq:shuffleQ(QUIZ_BANK.vemq),answers:{},finished:false};
 }
 
 function renderQuiz(){
@@ -741,7 +1111,7 @@ updateProgress();
 function selectAnswer(qid,oi){
 if(attempt.answers[qid]!==undefined)return;
 attempt.answers[qid]=oi;
-const qs=[...attempt.mcq,...attempt.emq];
+const qs=[...attempt.mcq,...attempt.emq,...attempt.vmcq,...attempt.vemq];
 const q=qs.find(x=>x.id===qid);
 const correct=oi===q.correctIndex;
 const btns=document.querySelectorAll(`[data-qid="${qid}"]`);
@@ -770,6 +1140,8 @@ function switchTab(tab){
 currentTab=tab;
 document.getElementById('tabMCQ').classList.toggle('active',tab==='mcq');
 document.getElementById('tabEMQ').classList.toggle('active',tab==='emq');
+document.getElementById('tabVMCQ').classList.toggle('active',tab==='vmcq');
+document.getElementById('tabVEMQ').classList.toggle('active',tab==='vemq');
 renderQuiz();
 }
 
@@ -779,15 +1151,21 @@ function finishQuiz(){
 attempt.finished=true;attempt.end=new Date().toISOString();
 const mcqScore=calcScore(attempt.mcq);
 const emqScore=calcScore(attempt.emq);
-const total=mcqScore.correct+emqScore.correct;
-const totalQ=attempt.mcq.length+attempt.emq.length;
+const vmcqScore=calcScore(attempt.vmcq);
+const vemqScore=calcScore(attempt.vemq);
+const total=mcqScore.correct+emqScore.correct+vmcqScore.correct+vemqScore.correct;
+const totalQ=attempt.mcq.length+attempt.emq.length+attempt.vmcq.length+attempt.vemq.length;
 const pct=Math.round(total/totalQ*100);
 const mcqPct=Math.round(mcqScore.correct/attempt.mcq.length*100);
 const emqPct=Math.round(emqScore.correct/attempt.emq.length*100);
+const vmcqPct=Math.round(vmcqScore.correct/attempt.vmcq.length*100);
+const vemqPct=Math.round(vemqScore.correct/attempt.vemq.length*100);
 
 document.getElementById('resScore').textContent=pct+'%';
 document.getElementById('resMCQ').textContent=mcqPct+'%';
 document.getElementById('resEMQ').textContent=emqPct+'%';
+document.getElementById('resVMCQ').textContent=vmcqPct+'%';
+document.getElementById('resVEMQ').textContent=vemqPct+'%';
 document.getElementById('resOverall').textContent=pct+'%';
 
 let award='';
@@ -801,19 +1179,19 @@ document.getElementById('resAward').textContent=award;
 const gd=document.getElementById('resGuidance');
 if(pct<70){
 const domains={};
-[...attempt.mcq,...attempt.emq].forEach(q=>{
+[...attempt.mcq,...attempt.emq,...attempt.vmcq,...attempt.vemq].forEach(q=>{
 if(!domains[q.topic])domains[q.topic]={c:0,t:0};
 domains[q.topic].t++;
 if(attempt.answers[q.id]===q.correctIndex)domains[q.topic].c++;
 });
-const weak=Object.entries(domains).map(([t,s])=>({t,p:s.t?Math.round(s.c/s.t*100):0})).sort((a,b)=>a.p-b.p).slice(0,2);
+const weak=Object.entries(domains).map(([t,s])=>({t,p:s.t?Math.round(s.c/s.t*100):0})).sort((a,b)=>a.p-b.p).slice(0,3);
 gd.style.display='block';
 gd.innerHTML=`<strong>You are building strong foundations.</strong> Focused revision will rapidly improve your score.<br><br><strong>Focus areas:</strong><ul>${weak.map(w=>`<li>${w.t} (${w.p}%)</li>`).join('')}</ul><br><em>Guidance from Dr Abdul Mannan</em>`;
 }else{gd.style.display='none'}
 
 document.getElementById('resultsCard').classList.add('show');
 document.getElementById('finishBtn').style.display='none';
-saveHistory({id:attempt.id,date:attempt.start,mcq:mcqPct,emq:emqPct,overall:pct,award});
+saveHistory({id:attempt.id,date:attempt.start,mcq:mcqPct,emq:emqPct,vmcq:vmcqPct,vemq:vemqPct,overall:pct,award});
 document.getElementById('resultsCard').scrollIntoView({behavior:'smooth'});
 }
 
