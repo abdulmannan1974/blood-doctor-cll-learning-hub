@@ -152,6 +152,62 @@ details[open] summary{margin-bottom:10px}
 /* FADE IN */
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .module{animation:fadeUp .5s ease both}
+/* ===== SVG ALGORITHM STYLES ===== */
+.algo-flow{margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#e8f4f3 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative;overflow-x:auto}
+.algo-flow.algo-warn-bg{background:linear-gradient(135deg,#f7f4ef 0%,#fdf0f1 50%,#f7f4ef 100%)}
+.algo-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.algo-num{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.algo-num span{color:#fff;font-size:1.3rem;font-weight:700}
+.algo-header h4{font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif}
+.algo-header .algo-credit{font-size:.78rem;color:var(--ink-body);opacity:.7}
+.algo-svg-wrap{display:flex;justify-content:center;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.algo-svg-wrap svg{display:block;max-width:100%;height:auto}
+.algo-svg-wrap svg text{font-family:'Source Sans 3',system-ui,sans-serif}
+/* ===== ACTIONABLE ELEMENTS ===== */
+.test-yourself{margin-top:18px;border:2px dashed var(--teal);border-radius:16px;padding:18px;background:rgba(0,109,119,.02)}
+.test-yourself summary{font-weight:700;font-size:1rem;color:var(--teal);cursor:pointer;display:flex;align-items:center;gap:8px}
+.test-yourself summary::before{content:'🧠';font-size:1.1rem}
+.test-yourself[open] summary{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.mini-q{background:var(--bg-ivory);border-radius:12px;padding:14px;margin-top:10px}
+.mini-q .mini-q-stem{font-weight:600;font-size:.92rem;margin-bottom:10px;line-height:1.5}
+.mini-q .mini-q-reveal{margin-top:10px;padding:12px;border-radius:10px;background:#e8f7f5;border:1px solid var(--sage);font-size:.88rem;line-height:1.6}
+.mini-q .mini-q-reveal summary{font-weight:600;color:var(--sage);cursor:pointer}
+.dx-checklist{list-style:none;padding:0;margin:10px 0}
+.dx-checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);font-size:.9rem}
+.dx-checklist li:last-child{border-bottom:none}
+.dx-checklist input[type="checkbox"]{accent-color:var(--teal);width:18px;height:18px;flex-shrink:0;margin-top:2px;cursor:pointer}
+.clinical-action{margin-top:14px;border-radius:14px;padding:14px 16px;background:rgba(0,109,119,.04);border:2px solid var(--teal);display:flex;align-items:flex-start;gap:12px}
+.clinical-action::before{content:'⚡';font-size:1.2rem;flex-shrink:0}
+.clinical-action-text{font-size:.88rem;line-height:1.6}
+.clinical-action-text strong{color:var(--teal)}
+.key-fact{margin-top:10px}
+.key-fact summary{font-weight:600;color:var(--teal);font-size:.9rem;cursor:pointer;padding:8px 12px;background:rgba(0,109,119,.04);border-radius:10px;transition:background .15s}
+.key-fact summary:hover{background:rgba(0,109,119,.08)}
+.key-fact[open] summary{border-radius:10px 10px 0 0;margin-bottom:0}
+.key-fact .key-fact-content{padding:12px;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;font-size:.88rem;line-height:1.65}
+/* ===== DISORDER CARDS (MODULE 7) ===== */
+.disorder-card{border-radius:18px;background:var(--surface);border:2px solid var(--border);overflow:hidden;margin-bottom:18px;transition:border-color .2s}
+.disorder-card:hover{border-color:var(--teal-soft)}
+.disorder-header{padding:18px 20px;background:linear-gradient(135deg,rgba(0,109,119,.06),rgba(42,157,143,.04));cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.disorder-header h4{font-size:1.15rem;margin:0;color:var(--ink-deep)}
+.disorder-header .disorder-badge{padding:4px 12px;border-radius:999px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.disorder-body{padding:20px}
+.disorder-body .disorder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:800px){.disorder-body .disorder-grid{grid-template-columns:1fr}}
+.disorder-section{background:var(--bg-ivory);border-radius:14px;padding:16px}
+.disorder-section h5{font-size:.95rem;color:var(--teal);margin-bottom:8px;font-family:'Fraunces',serif}
+.disorder-section ul{padding-left:16px;font-size:.88rem;line-height:1.7}
+.disorder-section p{font-size:.88rem;line-height:1.65}
+.compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;font-size:.82rem;margin-top:12px}
+.compare-table th{background:var(--teal);color:#fff;padding:10px 12px;font-weight:600;text-align:left}
+.compare-table td{padding:8px 12px;border-bottom:1px solid var(--border);background:var(--surface)}
+.compare-table tr:nth-child(even) td{background:var(--bg-ivory)}
+.compare-table tr:last-child td{border-bottom:none}
+/* PROGRESS TRACKER */
+.progress-tracker{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;padding:12px 16px;background:var(--surface);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.progress-tracker .pt-item{padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600;background:var(--bg-ivory);color:var(--ink-body);transition:all .2s;cursor:pointer;border:2px solid transparent}
+.progress-tracker .pt-item:hover{border-color:var(--teal-soft)}
+.progress-tracker .pt-item.pt-done{background:rgba(42,157,143,.1);color:var(--sage);border-color:var(--sage)}
 </style>
 </head>
 <body>
@@ -198,7 +254,6 @@ details[open] summary{margin-bottom:10px}
 <a href="#mod-tx">Treatment</a>
 <a href="#mod-comp">Complications</a>
 <a href="#mod-other">Other Disorders</a>
-<a href="#mod-fig">Figures</a>
 <a href="#quiz-zone">Quiz Zone</a>
 <a href="#mod-bib">Bibliography</a>
 </nav>
@@ -210,6 +265,18 @@ details[open] summary{margin-bottom:10px}
 <strong>Controls</strong>
 <button class="cta-outline" style="padding:8px 16px;font-size:.82rem" id="simplifyToggle" onclick="document.getElementById('app').classList.toggle('simplify');this.textContent=this.textContent==='Simplify view'?'Full view':'Simplify view'">Simplify view</button>
 <input style="flex:1;min-width:200px;border:1px solid var(--border);border-radius:999px;padding:10px 14px;font-size:.88rem" id="searchBox" placeholder="Search modules by keyword..." oninput="filterModules(this.value)"/>
+</div>
+
+<!-- PROGRESS TRACKER -->
+<div class="progress-tracker" id="progressTracker">
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 1: Classification</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 2: CLL Core</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 3: Molecular</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 4: Prognosis</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 5: Treatment</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 6: Complications</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Module 7: Other Disorders</span>
+<span class="pt-item" onclick="this.classList.toggle('pt-done')">Quiz Zone</span>
 </div>
 
 <!-- MODULE 1: OVERVIEW / CLASSIFICATION -->
@@ -256,139 +323,110 @@ details[open] summary{margin-bottom:10px}
 </table>
 </div>
 </div>
-<!-- ALGORITHM 1: CLL DIAGNOSTIC ALGORITHM -->
-<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#e8f4f3 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative">
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
-<div style="width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center">
-<span style="color:#fff;font-size:1.3rem;font-weight:700">1</span>
+<!-- ALGORITHM 1: CLL DIAGNOSTIC ALGORITHM (SVG) -->
+<div class="algo-flow">
+<div class="algo-header">
+<div class="algo-num" style="background:var(--teal)"><span>1</span></div>
+<div><h4>CLL Diagnostic Algorithm</h4><div class="algo-credit">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</div></div>
 </div>
-<div>
-<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">CLL Diagnostic Algorithm</h4>
-<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
-</div>
-</div>
-
-<!-- START NODE -->
-<div style="display:flex;flex-direction:column;align-items:center;gap:0">
-<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.92rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
-Lymphocytosis Detected on FBC
-</div>
-
-<!-- ARROW DOWN -->
-<div style="display:flex;flex-direction:column;align-items:center;gap:0">
-<div style="width:3px;height:28px;background:var(--teal)"></div>
-<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div>
-</div>
-
-<!-- DECISION 1: Persistent >3 months? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;transform:rotate(0deg);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
-<span style="max-width:200px;display:block;line-height:1.4">Persistent &gt;3 months?</span>
-</div>
-
-<!-- BRANCH: YES / NO -->
-<div style="display:flex;width:100%;max-width:700px;justify-content:center;gap:0;position:relative;margin-top:-2px">
-<!-- LEFT BRANCH: NO -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:280px">
-<div style="display:flex;align-items:center;gap:0">
-<div style="width:60px;height:3px;background:var(--cranberry)"></div>
-<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--cranberry)"></div>
-</div>
-<div style="background:rgba(178,58,72,.06);border:2px solid var(--cranberry);border-radius:12px;padding:12px 16px;text-align:center;font-size:.82rem;font-weight:600;color:var(--cranberry);margin-top:-6px;width:100%">
-<div style="font-size:.7rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:6px">NO</div><br>
-Reactive / Transient<br>
-<span style="font-weight:400;font-size:.78rem;color:var(--ink-body)">Investigate other causes (infection, autoimmune, stress)</span>
-</div>
-</div>
-<!-- CENTER ARROW DOWN: YES -->
-<div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:0 12px">
-<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">YES</div>
-<div style="width:3px;height:24px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--sage)"></div>
-</div>
-<!-- RIGHT spacer -->
-<div style="flex:1;max-width:280px"></div>
-</div>
-
-<!-- STEP: Immunophenotyping -->
-<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
-Perform Immunophenotyping<br>
-<span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">(CD5, CD19, CD20, CD23, CD200, SmIg, FMC7)</span>
-</div>
-
-<!-- ARROW DOWN -->
-<div style="display:flex;flex-direction:column;align-items:center;gap:0">
-<div style="width:3px;height:28px;background:var(--teal)"></div>
-<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div>
-</div>
-
-<!-- DECISION 2: CLL Score 4-5? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
-<span style="max-width:200px;display:block;line-height:1.4">CLL Score 4&ndash;5?</span>
-</div>
-
-<!-- BRANCH: YES / NO -->
-<div style="display:flex;width:100%;max-width:800px;justify-content:center;gap:24px;position:relative;margin-top:-2px">
-<!-- LEFT: Score <4 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:340px">
-<div style="display:flex;align-items:center;gap:0;margin-bottom:8px">
-<div style="width:40px;height:3px;background:var(--amber)"></div>
-<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--amber)"></div>
-</div>
-<div style="font-size:.7rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:8px">SCORE &lt;4</div>
-<div style="background:#fff5e6;border:2px solid var(--amber);border-radius:14px;padding:14px 16px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%">
-Consider Other Diagnoses<br>
-<span style="font-weight:400;font-size:.78rem;color:var(--ink-body)">SMZL, HCL, MCL, LPL/WM</span>
-</div>
+<div class="algo-svg-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" width="800" height="680">
+<defs>
+<marker id="ah-teal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#006d77"/></marker>
+<marker id="ah-sage" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2a9d8f"/></marker>
+<marker id="ah-cran" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b23a48"/></marker>
+<marker id="ah-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#e09f3e"/></marker>
+<marker id="ah-teal-d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth"><polygon points="0 0,10 3.5,0 7" fill="#006d77"/></marker>
+<filter id="ds"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".08"/></filter>
+</defs>
+<!-- START: Lymphocytosis -->
+<rect x="240" y="10" width="320" height="46" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds)"/>
+<text x="400" y="38" text-anchor="middle" font-size="14" font-weight="600" fill="#102a43">Lymphocytosis Detected on FBC</text>
 <!-- Arrow down -->
-<div style="width:3px;height:18px;background:var(--amber);margin:0 auto"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--amber);margin:0 auto"></div>
-<div style="background:var(--surface);border:2px solid var(--amber);border-radius:12px;padding:12px 14px;text-align:center;font-size:.8rem;color:var(--ink-body);width:100%;margin-top:4px">
-<strong>Additional Markers:</strong><br>
-CD103, BRAF V600E, Cyclin D1, MYD88 L265P, Annexin A1
-</div>
-</div>
-
-<!-- RIGHT: Score 4-5 -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;max-width:340px">
-<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">SCORE 4&ndash;5</div>
-<div style="width:3px;height:20px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--sage)"></div>
-
-<!-- DECISION 3: B cells >=5? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:14px 18px;text-align:center;font-size:.85rem;font-weight:600;color:var(--ink-deep);width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:100px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(224,159,62,.1)">
-<span style="max-width:180px;display:block;line-height:1.3;font-size:.82rem">B cells &ge;5&times;10&#8313;/L?</span>
-</div>
-
-<!-- Sub-branches -->
-<div style="display:flex;width:100%;gap:12px;margin-top:-2px">
+<line x1="400" y1="56" x2="400" y2="86" stroke="#006d77" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<!-- DIAMOND 1: Persistent >3 months? -->
+<polygon points="400,90 510,145 400,200 290,145" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds)"/>
+<text x="400" y="142" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Persistent</text>
+<text x="400" y="158" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">&gt;3 months?</text>
+<!-- NO branch left -->
+<line x1="290" y1="145" x2="160" y2="145" stroke="#b23a48" stroke-width="2.5" marker-end="url(#ah-cran)"/>
+<rect x="80" y="132" width="20" height="16" rx="8" fill="#b23a48"/><text x="90" y="144" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO</text>
+<rect x="10" y="165" width="170" height="64" rx="12" fill="rgba(178,58,72,.06)" stroke="#b23a48" stroke-width="2"/>
+<text x="95" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#b23a48">Reactive / Transient</text>
+<text x="95" y="200" text-anchor="middle" font-size="10" fill="#243b53">Investigate other causes</text>
+<text x="95" y="214" text-anchor="middle" font-size="10" fill="#243b53">(infection, autoimmune, stress)</text>
+<!-- YES branch down -->
+<line x1="400" y1="200" x2="400" y2="238" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#ah-sage)"/>
+<rect x="380" y="204" width="32" height="16" rx="8" fill="#2a9d8f"/><text x="396" y="216" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">YES</text>
+<!-- BOX: Immunophenotyping -->
+<rect x="220" y="242" width="360" height="52" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds)"/>
+<text x="400" y="264" text-anchor="middle" font-size="14" font-weight="600" fill="#102a43">Perform Immunophenotyping</text>
+<text x="400" y="282" text-anchor="middle" font-size="11" fill="#243b53">(CD5, CD19, CD20, CD23, CD200, SmIg, FMC7)</text>
+<!-- Arrow down -->
+<line x1="400" y1="294" x2="400" y2="324" stroke="#006d77" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<!-- DIAMOND 2: CLL Score 4-5? -->
+<polygon points="400,328 510,383 400,438 290,383" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds)"/>
+<text x="400" y="380" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">CLL Score</text>
+<text x="400" y="396" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">4–5?</text>
+<!-- LEFT: Score <4 -->
+<line x1="290" y1="383" x2="140" y2="383" stroke="#e09f3e" stroke-width="2.5" marker-end="url(#ah-amber)"/>
+<rect x="108" y="373" width="52" height="16" rx="8" fill="#e09f3e"/><text x="134" y="385" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">SCORE &lt;4</text>
+<rect x="20" y="405" width="240" height="55" rx="12" fill="#fff5e6" stroke="#e09f3e" stroke-width="2"/>
+<text x="140" y="424" text-anchor="middle" font-size="12" font-weight="700" fill="#102a43">Consider Other Diagnoses</text>
+<text x="140" y="440" text-anchor="middle" font-size="11" fill="#243b53">SMZL, HCL, MCL, LPL/WM</text>
+<text x="140" y="452" text-anchor="middle" font-size="10" fill="#243b53">(CD103, BRAF, Cyclin D1, MYD88, Annexin A1)</text>
+<!-- RIGHT: Score 4-5 branch down -->
+<line x1="400" y1="438" x2="400" y2="468" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#ah-sage)"/>
+<rect x="370" y="442" width="56" height="16" rx="8" fill="#2a9d8f"/><text x="398" y="454" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">SCORE 4–5</text>
+<!-- DIAMOND 3: B cells >=5? -->
+<polygon points="400,472 500,517 400,562 300,517" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds)"/>
+<text x="400" y="515" text-anchor="middle" font-size="12" font-weight="600" fill="#102a43">B cells</text>
+<text x="400" y="530" text-anchor="middle" font-size="12" font-weight="600" fill="#102a43">≥5×10⁹/L?</text>
 <!-- YES = CLL -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 8px;margin-bottom:4px">YES</div>
-<div style="width:3px;height:14px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
-<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:14px;text-align:center;font-weight:700;font-size:.95rem;color:var(--sage);width:100%;box-shadow:0 4px 16px rgba(42,157,143,.15);margin-top:4px">
-CLL
-<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:4px">Proceed to staging &amp; molecular workup</div>
-</div>
-</div>
+<line x1="350" y1="562" x2="350" y2="598" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#ah-sage)"/>
+<rect x="334" y="564" width="28" height="14" rx="7" fill="#2a9d8f"/><text x="348" y="575" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">YES</text>
+<rect x="270" y="602" width="160" height="60" rx="14" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2.5" filter="url(#ds)"/>
+<text x="350" y="626" text-anchor="middle" font-size="16" font-weight="700" fill="#2a9d8f">CLL</text>
+<text x="350" y="644" text-anchor="middle" font-size="10" fill="#243b53">Proceed to staging &amp;</text>
+<text x="350" y="656" text-anchor="middle" font-size="10" fill="#243b53">molecular workup</text>
 <!-- NO = MBL/SLL -->
-<div style="flex:1;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 8px;margin-bottom:4px">NO</div>
-<div style="width:3px;height:14px;background:var(--cranberry)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
-<div style="background:rgba(178,58,72,.05);border:2px solid var(--cranberry);border-radius:14px;padding:14px;text-align:center;font-weight:600;font-size:.85rem;color:var(--ink-deep);width:100%;margin-top:4px">
-MBL or SLL
-<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:4px">Check for tissue disease (adenopathy, organomegaly)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<line x1="450" y1="562" x2="450" y2="598" stroke="#b23a48" stroke-width="2.5" marker-end="url(#ah-cran)"/>
+<rect x="436" y="564" width="24" height="14" rx="7" fill="#b23a48"/><text x="448" y="575" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO</text>
+<rect x="450" y="602" width="170" height="60" rx="14" fill="rgba(178,58,72,.05)" stroke="#b23a48" stroke-width="2" filter="url(#ds)"/>
+<text x="535" y="626" text-anchor="middle" font-size="14" font-weight="700" fill="#102a43">MBL or SLL</text>
+<text x="535" y="644" text-anchor="middle" font-size="10" fill="#243b53">Check for tissue disease</text>
+<text x="535" y="656" text-anchor="middle" font-size="10" fill="#243b53">(adenopathy, organomegaly)</text>
+</svg>
 </div>
 </div>
 <!-- END ALGORITHM 1 -->
 
 <div class="callout pearl"><div class="callout-label">Clinical Pearl</div><div class="callout-text">In typical CLL with high lymphocyte count and classic phenotype, lymph node biopsy is NOT required. Reserve biopsy for atypical cases and suspected lymphoma.</div></div>
+
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Diagnostic Checklist &mdash; CLL Workup:</strong></div>
+</div>
+<ul class="dx-checklist">
+<li><input type="checkbox">FBC with differential &mdash; persistent lymphocytosis &ge;3 months</li>
+<li><input type="checkbox">Blood film review with experienced haematopathologist</li>
+<li><input type="checkbox">Flow cytometry: CD5, CD19, CD20, CD23, CD200, SmIg, FMC7</li>
+<li><input type="checkbox">CLL score calculated (4&ndash;5 supports CLL)</li>
+<li><input type="checkbox">Serum immunoglobulins (IgG, IgA, IgM)</li>
+<li><input type="checkbox">DAT (baseline, before treatment)</li>
+<li><input type="checkbox">Beta-2 microglobulin, LDH</li>
+</ul>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 1</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A patient has 4.2 &times; 10<sup>9</sup>/L clonal B cells with CLL phenotype (score 5/5), no lymphadenopathy, no organomegaly. Diagnosis?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Monoclonal B-cell Lymphocytosis (MBL).</strong> Clonal B cells &lt;5 &times; 10<sup>9</sup>/L with CLL phenotype but no tissue disease = MBL. High-count MBL progresses at ~1&ndash;2% per year.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">What CLL score marker distinguishes CLL from MCL when both are CD5+?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>CD23 and CD200.</strong> CLL is CD23+/CD200+. MCL is CD23&minus;/CD200&minus;. Also check Cyclin D1 and t(11;14) for MCL.</details>
+</div>
+</details>
 </section>
 
 <!-- MODULE 2: CLL CORE -->
@@ -437,6 +475,18 @@ MBL or SLL
 </div>
 </div>
 <div class="callout high-yield"><div class="callout-label">High Yield</div><div class="callout-text">High WBC count alone does NOT mandate treatment in CLL. Treatment is only indicated for active/progressive disease.</div></div>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 2</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A CLL patient has prolymphocytes &gt;15% on blood film. What does this signify?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Accelerated / transforming CLL.</strong> Prolymphocytes &gt;15% (formerly called &ldquo;prolymphocytic transformation&rdquo;) signals disease acceleration. Assess for Richter transformation.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Which immunoglobulin class falls first in CLL-related hypogammaglobulinaemia?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>IgM falls first,</strong> then IgG, then IgA. Hypogammaglobulinaemia affects ~25% and is the major driver of infection susceptibility.</details>
+</div>
+</details>
 </section>
 
 <!-- MODULE 3: MOLECULAR -->
@@ -483,6 +533,28 @@ MBL or SLL
 </div>
 </details>
 <div class="callout molecular"><div class="callout-label">Molecular Simplified</div><div class="callout-text">Think of IGHV status as the master switch: mutated = slow lane, unmutated = fast lane. TP53/del(17p) = CIT exit ramp &rarr; must use BTKi or BCL2i.</div></div>
+
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Pre-Treatment Molecular Workup Checklist:</strong></div>
+</div>
+<ul class="dx-checklist">
+<li><input type="checkbox">FISH panel: del(13q), trisomy 12, del(11q), del(17p)</li>
+<li><input type="checkbox">TP53 mutation status by NGS (mandatory before any therapy)</li>
+<li><input type="checkbox">IGHV mutation status</li>
+<li><input type="checkbox">Complex karyotype assessment (stimulated metaphase)</li>
+</ul>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 3</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A CLL patient has del(17p) on FISH and TP53 mutation on NGS. They are young and fit. Can you give them FCR?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>No.</strong> TP53/del(17p) disruption predicts CIT resistance. Must use pathway inhibitors: BTKi (zanubrutinib/acalabrutinib) or venetoclax + anti-CD20. FCR will produce short-lived, poor-quality responses.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Why do CLL cells overexpress BCL2 and why does this matter therapeutically?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>BCL2 is an anti-apoptotic protein.</strong> CLL cells depend on it for survival. <strong>Venetoclax</strong> is a BH3-mimetic that directly inhibits BCL2, triggering apoptosis. This explains why it works even in TP53-disrupted disease (apoptosis independent of p53).</details>
+</div>
+</details>
 </section>
 
 <!-- MODULE 4: PROGNOSIS -->
@@ -543,6 +615,18 @@ MBL or SLL
 </div>
 </div>
 <div class="callout pearl"><div class="callout-label">Clinical Pearl</div><div class="callout-text">The CLL-IPI combines Rai stage, age, TP53, IGHV status and beta-2 microglobulin into four risk groups. However, it was developed for CIT-treated patients and poorly predicts outcomes on BTKi/BCL2i.</div></div>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 4</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A patient has Hb 95 g/L from marrow failure and platelets 85 &times; 10<sup>9</sup>/L. What is their Rai stage?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Rai Stage IV (High Risk).</strong> Stage III = anaemia (Hb &lt;110 g/L) from marrow failure. Stage IV = thrombocytopenia (&lt;100 &times; 10<sup>9</sup>/L). Having both makes it Stage IV. Median survival 3&ndash;5 years historically.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Patient has Binet A with mutated IGHV, isolated del(13q), normal beta-2 microglobulin. Prognosis?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Excellent prognosis.</strong> All favourable markers: early stage, mutated IGHV, isolated del(13q), normal beta-2M. Median survival &gt;15 years. Many patients never require treatment.</details>
+</div>
+</details>
 </section>
 
 <!-- MODULE 5: TREATMENT -->
@@ -566,181 +650,122 @@ MBL or SLL
 </ul>
 </div>
 </div>
-<!-- ALGORITHM 2: CLL TREATMENT DECISION ALGORITHM (ENHANCED) -->
-<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#e8f4f3 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative;overflow-x:auto">
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
-<div style="width:44px;height:44px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center">
-<span style="color:#fff;font-size:1.3rem;font-weight:700">2</span>
+<!-- ALGORITHM 2: CLL TREATMENT DECISION (SVG) -->
+<div class="algo-flow">
+<div class="algo-header">
+<div class="algo-num" style="background:var(--teal)"><span>2</span></div>
+<div><h4>CLL Treatment Decision Algorithm</h4><div class="algo-credit">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</div></div>
 </div>
-<div>
-<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">CLL Treatment Decision Algorithm</h4>
-<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
-</div>
-</div>
-
-<div style="display:flex;flex-direction:column;align-items:center;gap:0;min-width:320px">
-
-<!-- ROW 1: START NODE -->
-<div style="background:var(--surface);border:2.5px solid var(--teal);border-radius:14px;padding:16px 28px;text-align:center;font-size:.95rem;font-weight:700;color:var(--teal);max-width:380px;width:100%;box-shadow:0 6px 20px rgba(0,109,119,.12)">
-CLL Diagnosed
-</div>
-
-<!-- Arrow down -->
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:24px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
-
-<!-- ROW 2: DECISION DIAMOND - Active disease? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:20px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:130px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
-<span style="max-width:220px;display:block;line-height:1.4">Active Disease<br>Criteria Met?</span>
-</div>
-
-<!-- ROW 3: YES / NO BRANCHES -->
-<div style="display:flex;width:100%;max-width:860px;justify-content:center;gap:0;position:relative;margin-top:-2px">
-
-<!-- LEFT BRANCH: NO = Watch & Wait -->
-<div style="flex:0 0 auto;display:flex;align-items:flex-start;max-width:240px">
-<div style="display:flex;flex-direction:column;align-items:center;width:100%">
-<div style="display:flex;align-items:center;gap:0">
-<div style="width:50px;height:3px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:9px solid var(--sage)"></div>
-</div>
-<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin:4px 0 6px">NO</div>
-<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px;text-align:center;font-size:.88rem;font-weight:700;color:var(--sage);width:100%;box-shadow:0 4px 12px rgba(42,157,143,.1)">
-Watch &amp; Wait
-<div style="font-size:.75rem;font-weight:400;color:var(--ink-body);margin-top:6px;line-height:1.5">Monitor every 3&ndash;6 months<br>FBC, clinical exam, LDT</div>
-</div>
-</div>
-</div>
-
-<!-- CENTER: YES arrow continuing down -->
-<div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:0 20px">
-<div style="font-size:.68rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:2px 10px;display:inline-block;margin-bottom:4px">YES</div>
-<div style="width:3px;height:28px;background:var(--amber)"></div>
-<div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--amber)"></div>
-</div>
-
-<!-- RIGHT spacer -->
-<div style="flex:0 0 auto;max-width:240px"></div>
-</div>
-
-<!-- ROW 4: Assess Biomarkers -->
-<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:14px 22px;text-align:center;font-size:.88rem;font-weight:600;color:var(--ink-deep);max-width:440px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.08)">
-Assess TP53/del(17p) + IGHV Mutation Status + Patient Fitness
-</div>
-
-<!-- Arrow down -->
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:24px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
-
-<!-- ROW 5: DECISION DIAMOND - TP53? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.88rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
-<span style="max-width:220px;display:block;line-height:1.3">del(17p) / TP53<br>Disrupted?</span>
-</div>
-
-<!-- ROW 6: THREE TREATMENT COLUMNS -->
-<div style="display:flex;width:100%;max-width:920px;justify-content:center;gap:16px;margin-top:4px;flex-wrap:wrap">
-
-<!-- COL 1: TP53 Disrupted (High Risk) -->
-<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">YES &mdash; TP53 DISRUPTED</div>
-<div style="width:3px;height:16px;background:var(--cranberry)"></div>
-<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--cranberry)"></div>
-<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(178,58,72,.08)">
-<div style="color:var(--cranberry);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">High Risk</div>
-<div style="font-weight:700;color:var(--cranberry)">BTKi Preferred</div>
-<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Zanubrutinib or Acalabrutinib<br>(2nd-gen preferred over ibrutinib)</div>
-<div style="margin:10px 0;padding:8px 0;border-top:1.5px dashed var(--cranberry);border-bottom:1.5px dashed var(--cranberry);font-size:.76rem;color:var(--ink-body)"><strong>OR</strong></div>
-<div style="font-weight:600">Venetoclax + anti-CD20</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:4px;padding:6px;background:rgba(178,58,72,.06);border-radius:8px">Avoid CIT &mdash; CIT resistance expected</div>
-</div>
-</div>
-
-<!-- COL 2: TP53 Intact + IGHV Mutated (Favourable) -->
-<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">NO + IGHV MUTATED</div>
-<div style="width:3px;height:16px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--sage)"></div>
-<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(42,157,143,.08)">
-<div style="color:var(--sage);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Favourable</div>
-<div style="font-weight:700;color:var(--sage)">Consider FCR</div>
-<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Fit patients &lt;65 years<br>(curative potential in this subset)</div>
-<div style="margin:10px 0;padding:8px 0;border-top:1.5px dashed var(--sage);border-bottom:1.5px dashed var(--sage);font-size:.76rem;color:var(--ink-body)"><strong>OR</strong></div>
-<div style="font-weight:600">BTKi / Venetoclax + Obinutuzumab</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:4px;padding:6px;background:rgba(42,157,143,.06);border-radius:8px">Equally effective; preferred if not fit for FCR</div>
-</div>
-</div>
-
-<!-- COL 3: TP53 Intact + IGHV Unmutated (Intermediate) -->
-<div style="flex:1;min-width:240px;max-width:290px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--amber);color:#fff;border-radius:999px;padding:3px 12px;margin-bottom:4px">NO + IGHV UNMUTATED</div>
-<div style="width:3px;height:16px;background:var(--amber)"></div>
-<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--amber)"></div>
-<div style="background:#fff5e6;border:2.5px solid var(--amber);border-radius:14px;padding:16px 14px;text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px;box-shadow:0 4px 12px rgba(224,159,62,.08)">
-<div style="color:#b87a20;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Intermediate Risk</div>
-<div style="font-weight:700;color:#b87a20">BTKi or Venetoclax + Obinutuzumab</div>
-<div style="font-size:.76rem;font-weight:400;color:var(--ink-body);margin-top:4px">Pathway inhibitors preferred<br>over CIT in unmutated IGHV</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body);margin-top:8px;padding:6px;background:rgba(224,159,62,.08);border-radius:8px">Avoid FCR &mdash; short remissions expected</div>
-</div>
-</div>
-</div>
-
-<!-- FRAIL / ELDERLY CALLOUT -->
-<div style="margin-top:18px;background:rgba(178,58,72,.04);border:2px dashed var(--cranberry);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;width:100%;max-width:700px">
-<div style="min-width:36px;height:36px;border-radius:50%;background:var(--cranberry);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-<span style="color:#fff;font-size:1rem;font-weight:700">!</span>
-</div>
-<div style="font-size:.82rem;color:var(--ink-deep);line-height:1.5">
-<strong style="color:var(--cranberry)">Frail / Elderly Patients:</strong> Chlorambucil + Obinutuzumab or low-dose ibrutinib. Venetoclax + Obinutuzumab also an option with careful TLS monitoring.
-</div>
-</div>
-
-<!-- SEPARATOR LINE -->
-<div style="width:100%;max-width:700px;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);margin:24px 0 8px;border-radius:2px"></div>
-<div style="font-size:.82rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px">Relapsed / Refractory Setting</div>
-
-<!-- Arrow down -->
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:18px;background:var(--teal)"></div><div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--teal)"></div></div>
-
-<!-- DECISION: What was prior therapy? -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:14px 20px;text-align:center;font-size:.85rem;font-weight:600;color:var(--ink-deep);max-width:340px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:100px;display:flex;align-items:center;justify-content:center">
-<span style="max-width:200px;display:block;line-height:1.3;font-size:.82rem">What Was<br>Prior Therapy?</span>
-</div>
-
-<!-- RELAPSE COLUMNS -->
-<div style="display:flex;width:100%;max-width:860px;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:4px">
-
+<div class="algo-svg-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 920" width="860" height="920">
+<defs>
+<marker id="a2t" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#006d77"/></marker>
+<marker id="a2s" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2a9d8f"/></marker>
+<marker id="a2c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b23a48"/></marker>
+<marker id="a2a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#e09f3e"/></marker>
+<filter id="ds2"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".08"/></filter>
+</defs>
+<!-- START -->
+<rect x="310" y="10" width="240" height="44" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="37" text-anchor="middle" font-size="15" font-weight="700" fill="#006d77">CLL Diagnosed</text>
+<line x1="430" y1="54" x2="430" y2="82" stroke="#006d77" stroke-width="2.5" marker-end="url(#a2t)"/>
+<!-- DIAMOND: Active disease? -->
+<polygon points="430,86 540,141 430,196 320,141" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="137" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Active Disease</text>
+<text x="430" y="153" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Criteria Met?</text>
+<!-- NO branch left -->
+<line x1="320" y1="141" x2="180" y2="141" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#a2s)"/>
+<rect x="196" y="131" width="24" height="14" rx="7" fill="#2a9d8f"/><text x="208" y="142" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO</text>
+<rect x="20" y="114" width="160" height="64" rx="14" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="100" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#2a9d8f">Watch &amp; Wait</text>
+<text x="100" y="154" text-anchor="middle" font-size="10" fill="#243b53">Monitor every 3–6 months</text>
+<text x="100" y="168" text-anchor="middle" font-size="10" fill="#243b53">FBC, clinical exam, LDT</text>
+<!-- YES down -->
+<line x1="430" y1="196" x2="430" y2="224" stroke="#e09f3e" stroke-width="2.5" marker-end="url(#a2a)"/>
+<rect x="414" y="200" width="28" height="14" rx="7" fill="#e09f3e"/><text x="428" y="211" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">YES</text>
+<!-- Assess Biomarkers -->
+<rect x="230" y="228" width="400" height="44" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="255" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Assess TP53/del(17p) + IGHV Status + Patient Fitness</text>
+<line x1="430" y1="272" x2="430" y2="300" stroke="#006d77" stroke-width="2.5" marker-end="url(#a2t)"/>
+<!-- DIAMOND: TP53? -->
+<polygon points="430,304 540,359 430,414 320,359" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="355" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">del(17p)/TP53</text>
+<text x="430" y="371" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Disrupted?</text>
+<!-- THREE COLUMNS from diamond -->
+<!-- COL 1: YES TP53 - left -->
+<line x1="320" y1="359" x2="155" y2="359" stroke="#b23a48" stroke-width="2" />
+<line x1="155" y1="359" x2="155" y2="428" stroke="#b23a48" stroke-width="2" marker-end="url(#a2c)"/>
+<rect x="92" y="348" width="110" height="16" rx="8" fill="#b23a48"/><text x="147" y="360" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">YES — TP53 DISRUPTED</text>
+<rect x="40" y="432" width="230" height="168" rx="14" fill="#fce8ea" stroke="#b23a48" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="155" y="452" text-anchor="middle" font-size="10" font-weight="700" fill="#b23a48" letter-spacing=".5">HIGH RISK</text>
+<text x="155" y="472" text-anchor="middle" font-size="14" font-weight="700" fill="#b23a48">BTKi Preferred</text>
+<text x="155" y="490" text-anchor="middle" font-size="11" fill="#243b53">Zanubrutinib or Acalabrutinib</text>
+<text x="155" y="504" text-anchor="middle" font-size="10" fill="#243b53">(2nd-gen preferred over ibrutinib)</text>
+<line x1="80" y1="516" x2="230" y2="516" stroke="#b23a48" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="155" y="530" text-anchor="middle" font-size="11" font-weight="600" fill="#102a43">OR Venetoclax + anti-CD20</text>
+<rect x="62" y="542" width="186" height="30" rx="8" fill="rgba(178,58,72,.08)"/>
+<text x="155" y="556" text-anchor="middle" font-size="10" fill="#b23a48" font-weight="600">Avoid CIT — resistance expected</text>
+<text x="155" y="592" text-anchor="middle" font-size="10" fill="#243b53" font-style="italic">MRD-guided; continuous BTKi</text>
+<!-- COL 2: IGHV Mutated - center -->
+<line x1="430" y1="414" x2="430" y2="428" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#a2s)"/>
+<rect x="380" y="416" width="100" height="16" rx="8" fill="#2a9d8f"/><text x="430" y="428" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO + IGHV MUTATED</text>
+<rect x="315" y="432" width="230" height="168" rx="14" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="452" text-anchor="middle" font-size="10" font-weight="700" fill="#2a9d8f" letter-spacing=".5">FAVOURABLE</text>
+<text x="430" y="472" text-anchor="middle" font-size="14" font-weight="700" fill="#2a9d8f">Consider FCR</text>
+<text x="430" y="490" text-anchor="middle" font-size="11" fill="#243b53">Fit patients &lt;65 years</text>
+<text x="430" y="504" text-anchor="middle" font-size="10" fill="#243b53">(curative potential in this subset)</text>
+<line x1="350" y1="516" x2="510" y2="516" stroke="#2a9d8f" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="430" y="530" text-anchor="middle" font-size="11" font-weight="600" fill="#102a43">OR BTKi / Ven + Obinutuzumab</text>
+<rect x="337" y="542" width="186" height="30" rx="8" fill="rgba(42,157,143,.06)"/>
+<text x="430" y="556" text-anchor="middle" font-size="10" fill="#2a9d8f" font-weight="600">Equally effective if not fit for FCR</text>
+<text x="430" y="592" text-anchor="middle" font-size="10" fill="#243b53" font-style="italic">Fixed-duration preferred</text>
+<!-- COL 3: IGHV Unmutated - right -->
+<line x1="540" y1="359" x2="705" y2="359" stroke="#e09f3e" stroke-width="2"/>
+<line x1="705" y1="359" x2="705" y2="428" stroke="#e09f3e" stroke-width="2" marker-end="url(#a2a)"/>
+<rect x="634" y="348" width="120" height="16" rx="8" fill="#e09f3e"/><text x="694" y="360" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO + IGHV UNMUTATED</text>
+<rect x="590" y="432" width="230" height="168" rx="14" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="705" y="452" text-anchor="middle" font-size="10" font-weight="700" fill="#b87a20" letter-spacing=".5">INTERMEDIATE RISK</text>
+<text x="705" y="472" text-anchor="middle" font-size="13" font-weight="700" fill="#b87a20">BTKi or Ven+Obi</text>
+<text x="705" y="490" text-anchor="middle" font-size="11" fill="#243b53">Pathway inhibitors preferred</text>
+<text x="705" y="504" text-anchor="middle" font-size="10" fill="#243b53">over CIT in unmutated IGHV</text>
+<rect x="612" y="518" width="186" height="30" rx="8" fill="rgba(224,159,62,.08)"/>
+<text x="705" y="532" text-anchor="middle" font-size="10" fill="#b87a20" font-weight="600">Avoid FCR — short remissions</text>
+<text x="705" y="562" text-anchor="middle" font-size="10" fill="#243b53" font-style="italic">Continuous or fixed-duration</text>
+<!-- FRAIL callout -->
+<rect x="160" y="618" width="540" height="44" rx="14" fill="rgba(178,58,72,.04)" stroke="#b23a48" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="180" y="636" font-size="12" font-weight="700" fill="#b23a48">!</text>
+<text x="200" y="636" font-size="12" font-weight="700" fill="#b23a48">Frail / Elderly:</text>
+<text x="200" y="652" font-size="11" fill="#243b53">Chlorambucil+Obinutuzumab or low-dose ibrutinib. Ven+Obi with TLS monitoring.</text>
+<!-- SEPARATOR -->
+<line x1="230" y1="682" x2="630" y2="682" stroke="#006d77" stroke-width="1.5" opacity=".3"/>
+<text x="430" y="700" text-anchor="middle" font-size="11" font-weight="700" fill="#006d77" letter-spacing="1.5">RELAPSED / REFRACTORY</text>
+<line x1="430" y1="706" x2="430" y2="730" stroke="#006d77" stroke-width="2.5" marker-end="url(#a2t)"/>
+<!-- DIAMOND: Prior therapy -->
+<polygon points="430,734 520,774 430,814 340,774" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds2)"/>
+<text x="430" y="772" text-anchor="middle" font-size="12" font-weight="600" fill="#102a43">What Was</text>
+<text x="430" y="786" text-anchor="middle" font-size="12" font-weight="600" fill="#102a43">Prior Therapy?</text>
 <!-- After BTKi -->
-<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">AFTER BTKi</div>
-<div style="width:3px;height:12px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
-<div style="background:#e8f7f5;border:2px solid var(--sage);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
-<div style="font-weight:700;color:var(--sage);margin-bottom:4px">Switch to Venetoclax-based</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Venetoclax + Rituximab (fixed duration)</div>
-</div>
-</div>
-
+<line x1="340" y1="774" x2="155" y2="774" stroke="#2a9d8f" stroke-width="2"/>
+<line x1="155" y1="774" x2="155" y2="834" stroke="#2a9d8f" stroke-width="2" marker-end="url(#a2s)"/>
+<rect x="108" y="764" width="62" height="14" rx="7" fill="#2a9d8f"/><text x="139" y="775" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">AFTER BTKi</text>
+<rect x="55" y="838" width="200" height="54" rx="12" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2"/>
+<text x="155" y="858" text-anchor="middle" font-size="12" font-weight="700" fill="#2a9d8f">Switch to Venetoclax</text>
+<text x="155" y="876" text-anchor="middle" font-size="10" fill="#243b53">Venetoclax + Rituximab (fixed)</text>
 <!-- After BCL2i -->
-<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">AFTER BCL2i</div>
-<div style="width:3px;height:12px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
-<div style="background:#e8f7f5;border:2px solid var(--sage);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
-<div style="font-weight:700;color:var(--sage);margin-bottom:4px">Switch to BTKi-based</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Zanubrutinib / Acalabrutinib continuous</div>
-</div>
-</div>
-
+<line x1="430" y1="814" x2="430" y2="834" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#a2s)"/>
+<rect x="385" y="816" width="62" height="14" rx="7" fill="#2a9d8f"/><text x="416" y="827" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">AFTER BCL2i</text>
+<rect x="330" y="838" width="200" height="54" rx="12" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2"/>
+<text x="430" y="858" text-anchor="middle" font-size="12" font-weight="700" fill="#2a9d8f">Switch to BTKi</text>
+<text x="430" y="876" text-anchor="middle" font-size="10" fill="#243b53">Zanubrutinib / Acalabrutinib</text>
 <!-- Multi-refractory -->
-<div style="flex:1;min-width:200px;max-width:260px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.68rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">MULTI-REFRACTORY</div>
-<div style="width:3px;height:12px;background:var(--cranberry)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
-<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:12px;padding:14px 12px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-deep);width:100%;margin-top:4px">
-<div style="font-weight:700;color:var(--cranberry);margin-bottom:4px">Allo-HSCT / CAR-T</div>
-<div style="font-size:.72rem;font-weight:400;color:var(--ink-body)">Clinical trial evaluation<br>Pirtobrutinib (non-covalent BTKi)</div>
-</div>
-</div>
-</div>
-
+<line x1="520" y1="774" x2="705" y2="774" stroke="#b23a48" stroke-width="2"/>
+<line x1="705" y1="774" x2="705" y2="834" stroke="#b23a48" stroke-width="2" marker-end="url(#a2c)"/>
+<rect x="636" y="764" width="90" height="14" rx="7" fill="#b23a48"/><text x="681" y="775" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">MULTI-REFRACTORY</text>
+<rect x="605" y="838" width="200" height="68" rx="12" fill="#fce8ea" stroke="#b23a48" stroke-width="2.5"/>
+<text x="705" y="858" text-anchor="middle" font-size="12" font-weight="700" fill="#b23a48">Allo-HSCT / CAR-T</text>
+<text x="705" y="876" text-anchor="middle" font-size="10" fill="#243b53">Clinical trial evaluation</text>
+<text x="705" y="892" text-anchor="middle" font-size="10" fill="#243b53">Pirtobrutinib (non-covalent BTKi)</text>
+</svg>
 </div>
 </div>
 <!-- END ALGORITHM 2 -->
@@ -759,6 +784,31 @@ Assess TP53/del(17p) + IGHV Mutation Status + Patient Fitness
 </div>
 </details>
 <div class="callout pitfall"><div class="callout-label">Pitfall</div><div class="callout-text">Do NOT confuse BTKi redistribution lymphocytosis with disease progression. Rising lymphocyte count with improving nodes/symptoms is an expected pharmacological effect.</div></div>
+
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Treatment Initiation Checklist:</strong></div>
+</div>
+<ul class="dx-checklist">
+<li><input type="checkbox">Active disease criteria confirmed (cytopenias, organomegaly, LDT, B symptoms)</li>
+<li><input type="checkbox">TP53/del(17p) status known before starting any therapy</li>
+<li><input type="checkbox">IGHV mutation status available</li>
+<li><input type="checkbox">Hepatitis B screening (HBsAg, anti-HBs, anti-HBc) before anti-CD20</li>
+<li><input type="checkbox">Baseline cardiac assessment if considering BTKi (ECG, BP, AF history)</li>
+<li><input type="checkbox">TLS risk assessment if considering venetoclax (tumour burden, renal function, urate)</li>
+<li><input type="checkbox">Patient fitness/frailty assessed (CIRS, ECOG)</li>
+</ul>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 5</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A 58-year-old fit woman with CLL (mutated IGHV, no TP53, Binet C) needs treatment. What is the one regimen with curative potential in this subgroup?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>FCR (Fludarabine, Cyclophosphamide, Rituximab).</strong> In fit patients with mutated IGHV and no TP53, FCR achieves long-term (60%+) remissions &gt;10 years. This is the only CLL context where CIT has curative potential.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Patient on ibrutinib develops AF. What two drug classes should you AVOID combining with ibrutinib?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Warfarin</strong> (bleeding risk with ibrutinib platelet dysfunction) and <strong>verapamil/diltiazem</strong> (CYP3A4 inhibitors increase ibrutinib levels). Use DOACs cautiously; prefer beta-blockers for rate control.</details>
+</div>
+</details>
 </section>
 
 <!-- MODULE 6: COMPLICATIONS -->
@@ -805,147 +855,437 @@ Assess TP53/del(17p) + IGHV Mutation Status + Patient Fitness
 </ul>
 </div>
 </div>
-<!-- ALGORITHM 3: RICHTER TRANSFORMATION WORKUP -->
-<div style="margin-top:24px;padding:28px;border-radius:20px;background:linear-gradient(135deg,#f7f4ef 0%,#fdf0f1 50%,#f7f4ef 100%);border:2px solid var(--border);position:relative">
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
-<div style="width:44px;height:44px;border-radius:50%;background:var(--cranberry);display:flex;align-items:center;justify-content:center">
-<span style="color:#fff;font-size:1.3rem;font-weight:700">3</span>
+<!-- ALGORITHM 3: RICHTER TRANSFORMATION WORKUP (SVG) -->
+<div class="algo-flow algo-warn-bg">
+<div class="algo-header">
+<div class="algo-num" style="background:var(--cranberry)"><span>3</span></div>
+<div><h4>Richter Transformation Workup Algorithm</h4><div class="algo-credit">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</div></div>
 </div>
-<div>
-<h4 style="font-size:1.25rem;margin:0;color:var(--ink-deep);font-family:'Fraunces',serif">Richter Transformation Workup Algorithm</h4>
-<span style="font-size:.78rem;color:var(--ink-body);opacity:.7">Blood🩸Doctor &middot; Dr Abdul Mannan FRCPath FCPS</span>
-</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0">
-<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px 24px;text-align:center;font-size:.92rem;font-weight:700;color:var(--cranberry);max-width:460px;width:100%;box-shadow:0 4px 12px rgba(178,58,72,.15)">
-&#9888; Clinical Suspicion: Rapid node growth + Rising LDH + B symptoms
-</div>
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--cranberry)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--cranberry)"></div></div>
-<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
-PET/CT Scan<br><span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">Identify most metabolically active site (SUV<sub>max</sub> often &gt;5)</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
-<div style="background:var(--surface);border:2px solid var(--teal);border-radius:14px;padding:16px 24px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:420px;width:100%;box-shadow:0 4px 12px rgba(0,109,119,.1)">
-PET-Guided Tissue Biopsy<br><span style="font-weight:400;font-size:.8rem;color:var(--ink-body)">Core/excisional biopsy from hottest node</span>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center"><div style="width:3px;height:28px;background:var(--teal)"></div><div style="width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid var(--teal)"></div></div>
-<!-- DECISION: Clonal relationship -->
-<div style="background:#fff5e6;border:2.5px solid var(--amber);padding:18px 22px;text-align:center;font-size:.9rem;font-weight:600;color:var(--ink-deep);max-width:380px;width:100%;clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);min-height:120px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(224,159,62,.15)">
-<span style="max-width:220px;display:block;line-height:1.4">Clonally related to CLL?</span>
-</div>
-<!-- Branches -->
-<div style="display:flex;width:100%;max-width:700px;justify-content:center;gap:20px;margin-top:4px;flex-wrap:wrap">
-<div style="flex:1;min-width:260px;max-width:320px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.7rem;font-weight:700;background:var(--cranberry);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">YES (~80%)</div>
-<div style="width:3px;height:14px;background:var(--cranberry)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--cranberry)"></div>
-<div style="background:#fce8ea;border:2.5px solid var(--cranberry);border-radius:14px;padding:16px;text-align:center;font-weight:700;font-size:.9rem;color:var(--cranberry);width:100%;margin-top:4px">
-Clonally Related DLBCL<div style="font-size:.78rem;font-weight:400;color:var(--ink-body);margin-top:6px">Poor prognosis (median OS &lt;1 year)<br>R-CHOP/R-EPOCH &rarr; allo-HSCT if eligible<br>Consider clinical trials, checkpoint inhibitors</div>
-</div>
-</div>
-<div style="flex:1;min-width:260px;max-width:320px;display:flex;flex-direction:column;align-items:center">
-<div style="font-size:.7rem;font-weight:700;background:var(--sage);color:#fff;border-radius:999px;padding:2px 10px;margin-bottom:4px">NO (~20%)</div>
-<div style="width:3px;height:14px;background:var(--sage)"></div>
-<div style="width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--sage)"></div>
-<div style="background:#e8f7f5;border:2.5px solid var(--sage);border-radius:14px;padding:16px;text-align:center;font-weight:700;font-size:.9rem;color:var(--sage);width:100%;margin-top:4px">
-Clonally Unrelated DLBCL<div style="font-size:.78rem;font-weight:400;color:var(--ink-body);margin-top:6px">Prognosis like de novo DLBCL<br>Standard R-CHOP (&plusmn; HSCT)<br>Much better outcomes</div>
-</div>
-</div>
-</div>
+<div class="algo-svg-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" width="720" height="560">
+<defs>
+<marker id="a3t" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#006d77"/></marker>
+<marker id="a3c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#b23a48"/></marker>
+<marker id="a3s" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2a9d8f"/></marker>
+<filter id="ds3"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".08"/></filter>
+</defs>
+<!-- Alert -->
+<rect x="130" y="10" width="460" height="50" rx="14" fill="#fce8ea" stroke="#b23a48" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="160" y="40" font-size="16" fill="#b23a48">&#9888;</text>
+<text x="180" y="36" font-size="12" font-weight="700" fill="#b23a48">Clinical Suspicion:</text>
+<text x="320" y="36" font-size="12" fill="#102a43">Rapid node growth + Rising LDH + B symptoms</text>
+<line x1="360" y1="60" x2="360" y2="88" stroke="#b23a48" stroke-width="2.5" marker-end="url(#a3c)"/>
+<!-- PET/CT -->
+<rect x="180" y="92" width="360" height="50" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="360" y="114" text-anchor="middle" font-size="14" font-weight="600" fill="#102a43">PET/CT Scan</text>
+<text x="360" y="130" text-anchor="middle" font-size="10" fill="#243b53">Identify most metabolically active site (SUVmax often &gt;5)</text>
+<line x1="360" y1="142" x2="360" y2="170" stroke="#006d77" stroke-width="2.5" marker-end="url(#a3t)"/>
+<!-- Biopsy -->
+<rect x="180" y="174" width="360" height="50" rx="14" fill="#fff" stroke="#006d77" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="360" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#102a43">PET-Guided Tissue Biopsy</text>
+<text x="360" y="212" text-anchor="middle" font-size="10" fill="#243b53">Core/excisional biopsy from hottest node</text>
+<line x1="360" y1="224" x2="360" y2="252" stroke="#006d77" stroke-width="2.5" marker-end="url(#a3t)"/>
+<!-- Diamond: Clonal? -->
+<polygon points="360,256 470,311 360,366 250,311" fill="#fff5e6" stroke="#e09f3e" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="360" y="308" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">Clonally related</text>
+<text x="360" y="324" text-anchor="middle" font-size="13" font-weight="600" fill="#102a43">to CLL?</text>
+<!-- YES left -->
+<line x1="250" y1="311" x2="80" y2="311" stroke="#b23a48" stroke-width="2"/>
+<line x1="80" y1="311" x2="80" y2="400" stroke="#b23a48" stroke-width="2" marker-end="url(#a3c)"/>
+<rect x="98" y="300" width="60" height="16" rx="8" fill="#b23a48"/><text x="128" y="312" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">YES (~80%)</text>
+<rect x="10" y="404" width="300" height="140" rx="14" fill="#fce8ea" stroke="#b23a48" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="160" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#b23a48">Clonally Related DLBCL</text>
+<line x1="40" y1="440" x2="280" y2="440" stroke="#b23a48" stroke-width=".5"/>
+<text x="160" y="460" text-anchor="middle" font-size="11" fill="#243b53">Poor prognosis (median OS &lt;1 year)</text>
+<text x="160" y="478" text-anchor="middle" font-size="11" fill="#243b53">R-CHOP/R-EPOCH → allo-HSCT if eligible</text>
+<text x="160" y="496" text-anchor="middle" font-size="11" fill="#243b53">Clinical trials, checkpoint inhibitors</text>
+<text x="160" y="518" text-anchor="middle" font-size="10" fill="#b23a48" font-weight="600">Associated: TP53, NOTCH1, CDKN2A/B, MYC</text>
+<!-- NO right -->
+<line x1="470" y1="311" x2="640" y2="311" stroke="#2a9d8f" stroke-width="2"/>
+<line x1="640" y1="311" x2="640" y2="400" stroke="#2a9d8f" stroke-width="2" marker-end="url(#a3s)"/>
+<rect x="570" y="300" width="56" height="16" rx="8" fill="#2a9d8f"/><text x="598" y="312" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">NO (~20%)</text>
+<rect x="410" y="404" width="300" height="140" rx="14" fill="#e8f7f5" stroke="#2a9d8f" stroke-width="2.5" filter="url(#ds3)"/>
+<text x="560" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#2a9d8f">Clonally Unrelated DLBCL</text>
+<line x1="440" y1="440" x2="680" y2="440" stroke="#2a9d8f" stroke-width=".5"/>
+<text x="560" y="460" text-anchor="middle" font-size="11" fill="#243b53">Prognosis like de novo DLBCL</text>
+<text x="560" y="478" text-anchor="middle" font-size="11" fill="#243b53">Standard R-CHOP (± HSCT)</text>
+<text x="560" y="496" text-anchor="middle" font-size="11" fill="#243b53">Much better outcomes</text>
+<text x="560" y="518" text-anchor="middle" font-size="10" fill="#2a9d8f" font-weight="600">Treat as independent DLBCL</text>
+</svg>
 </div>
 </div>
 <!-- END ALGORITHM 3 -->
 
 <div class="callout red-flag"><div class="callout-label">Red Flag</div><div class="callout-text">Rapid node growth + rising LDH + B symptoms &rarr; suspect Richter transformation. Urgent tissue biopsy from the most metabolically active site (PET-guided) is essential.</div></div>
+
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Supportive Care Checklist &mdash; All CLL Patients:</strong></div>
+</div>
+<ul class="dx-checklist">
+<li><input type="checkbox">Immunoglobulin levels checked regularly; IgG replacement if recurrent infections + low IgG</li>
+<li><input type="checkbox">Vaccination: inactivated influenza, pneumococcal, herpes zoster (Shingrix)</li>
+<li><input type="checkbox">Hepatitis B screen before ANY anti-CD20 therapy</li>
+<li><input type="checkbox">Aciclovir prophylaxis during purine analogue / venetoclax therapy</li>
+<li><input type="checkbox">Annual skin surveillance (Merkel cell carcinoma, melanoma risk)</li>
+<li><input type="checkbox">DAT monitoring for autoimmune cytopenias</li>
+</ul>
+
+<details class="test-yourself">
+<summary>Test Yourself &mdash; Module 6</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A CLL patient has sudden Hb drop to 68 g/L with reticulocytes 10%, LDH 800, haptoglobin undetectable, DAT positive. Platelets also 45 &times; 10<sup>9</sup>/L with preserved megakaryocytes. Diagnosis?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Evans Syndrome</strong> (concurrent AIHA + ITP). Warm AIHA (DAT positive with haemolytic profile) PLUS immune thrombocytopenia (low platelets, preserved megakaryocytes). First-line: corticosteroids. Escalate to rituximab, then anti-CLL therapy if refractory.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Richter transformation biopsy shows clonally related DLBCL. What is the approximate median overall survival?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>&lt;1 year.</strong> Clonally related (80% of cases) has very poor prognosis. R-CHOP/R-EPOCH &rarr; allo-HSCT if eligible. Clonally unrelated (20%) has much better outcomes, treated like de novo DLBCL.</details>
+</div>
+</details>
 </section>
 
-<!-- MODULE 7: OTHER DISORDERS -->
+<!-- MODULE 7: OTHER CHRONIC B-CELL DISORDERS (DETAILED) -->
 <section class="module" id="mod-other">
 <div class="module-head"><h3>Module 7: Other Chronic B-cell Disorders</h3><span class="module-tag tag-diff">Differential</span></div>
-<div class="module-grid">
-<div class="card deep">
+<p class="section-sub">Comprehensive guide to CLL mimics and other chronic B-cell lymphoproliferative disorders with leukaemic expression. Each disorder has actionable diagnostic checklists, treatment pathways, and key differentiators.</p>
+
+<!-- SMZL -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
 <h4>SMZL &mdash; Splenic Marginal Zone Lymphoma</h4>
+<span class="disorder-badge" style="background:rgba(0,109,119,.1);color:var(--teal)">Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Clinical Features</h5>
 <ul>
-<li>Villous lymphocytes on blood film</li>
-<li>Splenomegaly (often massive)</li>
-<li>Intrasinusoidal marrow infiltration pattern</li>
-<li>CD11c+, CD103&minus;, CD5&minus;, CD23&minus;</li>
-<li>NOTCH2 mutations; no BRAF V600E</li>
-<li>Treatment: rituximab-based; splenectomy in selected cases</li>
+<li>Median age ~70 years; slight M:F predominance</li>
+<li><strong>Massive splenomegaly</strong> &mdash; often &gt;6 cm below costal margin</li>
+<li>Villous lymphocytes on blood film (short polar villi)</li>
+<li>Moderate lymphocytosis (often 10&ndash;30 &times; 10<sup>9</sup>/L)</li>
+<li>Autoimmune cytopenias in ~15%</li>
+<li>Hepatitis C association (screen all patients)</li>
+<li>Minimal or no peripheral lymphadenopathy</li>
 </ul>
 </div>
-<div class="card deep">
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
+<ul>
+<li>CD19+, CD20+, CD11c+</li>
+<li>CD5&minus;, CD23&minus;, CD103&minus;, CD123&minus;, CD25&minus;</li>
+<li>No BRAF V600E</li>
+<li><strong>NOTCH2 mutations</strong> (10&ndash;25%)</li>
+<li>KLF2 mutations (~20%)</li>
+<li>del(7q22-32) in ~30% &mdash; most frequent cytogenetic abnormality</li>
+<li>BM: <strong>intrasinusoidal infiltration pattern</strong> (characteristic)</li>
+</ul>
+</div>
+</div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Treatment Pathway:</strong> HCV+ &rarr; treat hepatitis first (may resolve lymphoma). HCV&minus; &rarr; Rituximab monotherapy is standard first-line. Splenectomy reserved for refractory cytopenias or diagnostic uncertainty. OS 10&ndash;15+ years.</div>
+</div>
+<ul class="dx-checklist" style="margin-top:14px">
+<li><input type="checkbox"><strong>Villous lymphocytes</strong> on film</li>
+<li><input type="checkbox"><strong>Splenomegaly</strong> confirmed</li>
+<li><input type="checkbox">CD103&minus;, CD25&minus;, BRAF&minus; (excludes HCL)</li>
+<li><input type="checkbox">Intrasinusoidal BM pattern</li>
+<li><input type="checkbox">Hepatitis C screen done</li>
+</ul>
+</div>
+</div>
+
+<!-- HCL -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
 <h4>HCL &mdash; Hairy-Cell Leukaemia</h4>
+<span class="disorder-badge" style="background:rgba(178,58,72,.08);color:var(--cranberry)">Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Clinical Presentation</h5>
 <ul>
-<li>Pancytopenia with monocytopenia (hallmark)</li>
-<li>Hairy projections on lymphocytes</li>
-<li>CD103+, CD123+, CD25+, CD11c+, Annexin A1+</li>
-<li><strong>BRAF V600E</strong> in virtually all cases</li>
-<li>Bone marrow: clear-zone infiltration, often dry tap</li>
-<li>Treatment: purine analogues (cladribine/pentostatin) &rarr; high durable remissions</li>
-<li>Relapsed: vemurafenib + rituximab</li>
+<li>2% of all leukaemias; <strong>M:F ratio 4:1</strong></li>
+<li>Median age 55 years</li>
+<li><strong>Pancytopenia with monocytopenia</strong> (hallmark)</li>
+<li>Moderate splenomegaly; minimal lymphadenopathy</li>
+<li>Hairy cells: pale-grey abundant cytoplasm with fine projections</li>
+<li>BM aspirate: <strong>dry tap</strong> (fibrosis)</li>
+<li>BM trephine: clear-zone &ldquo;fried-egg&rdquo; infiltration pattern</li>
 </ul>
 </div>
-<div class="card deep">
-<h4>Non-nodal Leukaemic MCL</h4>
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
 <ul>
-<li><strong>Cyclin D1+, t(11;14)(q13;q32)</strong> &mdash; key discriminator from CLL</li>
-<li>SOX11&minus;, CD200+ (unlike nodal MCL)</li>
-<li>Can mimic CLL morphologically</li>
-<li>Generally more indolent than nodal MCL but requires different management</li>
+<li>CD19+, CD20 bright, CD11c+</li>
+<li><strong>CD103+, CD123+, CD25+, Annexin A1+</strong></li>
+<li>CD5&minus;, CD23&minus;</li>
+<li><strong>BRAF V600E</strong> in virtually 100% (pathognomonic)</li>
+<li>IGHV mutated in most cases (usually VH4-34&minus;)</li>
+<li>TRAP (tartrate-resistant acid phosphatase) positive</li>
 </ul>
 </div>
-<div class="card deep">
-<h4>Splenic B-cell Lymphoma with Prominent Nucleoli (HCL Variant)</h4>
+</div>
+<div class="disorder-grid" style="margin-top:14px">
+<div class="disorder-section" style="background:#e8f7f5;border:1px solid var(--sage)">
+<h5 style="color:var(--sage)">First-Line Treatment</h5>
 <ul>
-<li>CD25&minus;, no BRAF V600E (key differences from classical HCL)</li>
-<li>CD123+, Annexin A1&minus;</li>
-<li>MAP2K1 mutations common</li>
-<li>Does NOT respond well to purine analogues alone</li>
-<li>Splenectomy may be considered</li>
+<li><strong>Cladribine</strong> (2-CdA) single course &mdash; CR 70&ndash;90%, ORR &gt;95%</li>
+<li><strong>Pentostatin</strong> alternative &mdash; similar efficacy</li>
+<li>Median remission duration: <strong>15 years</strong></li>
+<li>Pre-treatment: G-CSF if neutropenia, aciclovir prophylaxis</li>
 </ul>
 </div>
-<div class="card">
-<h4>SDRPL</h4>
+<div class="disorder-section" style="background:#fce8ea;border:1px solid var(--cranberry)">
+<h5 style="color:var(--cranberry)">Relapsed Disease</h5>
 <ul>
-<li>Splenic diffuse red pulp small B-cell lymphoma</li>
-<li>Rare; involves splenic red pulp diffusely</li>
-<li>CD5&minus;, CD23&minus;, Annexin A1&minus;</li>
-<li>CCND3 mutations described</li>
+<li><strong>Vemurafenib + Rituximab</strong> &mdash; CR &gt;85%, MRD negativity</li>
+<li>Repeat purine analogue if remission &gt;5 years</li>
+<li>Moxetumomab pasudotox (anti-CD22 immunotoxin)</li>
+<li>Ibrutinib shows activity (off-label)</li>
 </ul>
 </div>
-<div class="card">
-<h4>Follicular Lymphoma (Leukaemic Phase)</h4>
+</div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Diagnostic Pearl:</strong> If pancytopenia + monocytopenia + dry tap + BRAF V600E = Classical HCL until proven otherwise. Annexin A1 is the most specific marker (absent in all mimics).</div>
+</div>
+<ul class="dx-checklist" style="margin-top:14px">
+<li><input type="checkbox"><strong>Pancytopenia</strong> with monocytopenia</li>
+<li><input type="checkbox">Hairy cell morphology on film</li>
+<li><input type="checkbox">CD103+, CD123+, CD25+, Annexin A1+</li>
+<li><input type="checkbox"><strong>BRAF V600E</strong> confirmed</li>
+<li><input type="checkbox">BM trephine: clear-zone pattern</li>
+<li><input type="checkbox">Pre-treatment infection prophylaxis planned</li>
+</ul>
+</div>
+</div>
+
+<!-- SBCL-PN (HCL Variant) -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
+<h4>SBCL-PN &mdash; Splenic B-cell Lymphoma/Leukaemia with Prominent Nucleoli</h4>
+<span class="disorder-badge" style="background:rgba(224,159,62,.1);color:#b87a20">HCL Variant &middot; Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Key Differences from Classical HCL</h5>
 <ul>
-<li>CD10+, BCL6+, t(14;18)(q32;q21)</li>
-<li>Cleaved nuclei (centrocytes) on blood film</li>
+<li>WHO 5th edition reclassified from &ldquo;HCL variant&rdquo;</li>
+<li><strong>NO BRAF V600E</strong> (critical distinction)</li>
+<li>NO monocytopenia (unlike classical HCL)</li>
+<li>Usually <strong>leucocytosis</strong> (not pancytopenia)</li>
+<li>Cells with prominent nucleoli + hairy projections</li>
+<li>Normal MCV (HCL often has raised MCV)</li>
+</ul>
+</div>
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
+<ul>
+<li>CD11c+, CD103 &plusmn;, CD123+</li>
+<li><strong>CD25&minus;, Annexin A1&minus;</strong></li>
+<li><strong>MAP2K1 mutations</strong> common (~40%)</li>
+<li>IGHV unmutated in many cases</li>
+<li>Often VH4-34 usage (unlike classical HCL)</li>
+</ul>
+</div>
+</div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Treatment:</strong> Responds poorly to purine analogues alone. <strong>Cladribine + Rituximab</strong> combination achieves better responses. Trametinib (MEK inhibitor) for MAP2K1-mutated cases. Splenectomy in selected refractory patients.</div>
+</div>
+<div class="callout pitfall" style="margin-top:14px"><div class="callout-label">Pitfall</div><div class="callout-text">Do NOT assume &ldquo;hairy cells = HCL.&rdquo; If CD25&minus; and BRAF&minus;, this is SBCL-PN and requires different treatment. Purine analogues alone are insufficient.</div></div>
+</div>
+</div>
+
+<!-- Non-nodal MCL -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
+<h4>Non-nodal Leukaemic Mantle Cell Lymphoma</h4>
+<span class="disorder-badge" style="background:rgba(42,157,143,.1);color:var(--sage)">Indolent Subtype &middot; Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Clinical Features</h5>
+<ul>
+<li>Leukaemic presentation <strong>without significant lymphadenopathy</strong></li>
+<li>Splenomegaly may be present</li>
+<li>Can <strong>mimic CLL</strong> morphologically</li>
+<li>Typically more <strong>indolent course</strong> than nodal MCL</li>
+<li>Median age ~65 years</li>
+<li>Some patients can be observed (watch &amp; wait)</li>
+</ul>
+</div>
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
+<ul>
+<li><strong>Cyclin D1+, t(11;14)(q13;q32)</strong> &mdash; mandatory for diagnosis</li>
+<li><strong>SOX11&minus;</strong> (vs SOX11+ in classical nodal MCL)</li>
+<li>CD5+, CD200&minus;, CD23&minus;</li>
+<li>IGHV mutated in many cases</li>
+<li>No TP53 disruption (if present &rarr; aggressive behaviour)</li>
+</ul>
+</div>
+</div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Management:</strong> If SOX11&minus;, mutated IGHV, no TP53 &rarr; can watch &amp; wait. If treatment needed: BTKi or bendamustine-rituximab. Transform to blastoid/pleomorphic MCL requires aggressive therapy.</div>
+</div>
+<table class="compare-table" style="margin-top:14px">
+<thead><tr><th>Feature</th><th>Non-nodal MCL</th><th>Classical Nodal MCL</th></tr></thead>
+<tbody>
+<tr><td>SOX11</td><td>Negative</td><td>Positive</td></tr>
+<tr><td>Lymphadenopathy</td><td>Absent/minimal</td><td>Present, often bulky</td></tr>
+<tr><td>IGHV</td><td>Often mutated</td><td>Usually unmutated</td></tr>
+<tr><td>Biology</td><td>Indolent</td><td>Aggressive</td></tr>
+<tr><td>Watch &amp; wait?</td><td>Yes (selected)</td><td>Rarely</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- FL Leukaemic Phase -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
+<h4>Follicular Lymphoma &mdash; Leukaemic Phase</h4>
+<span class="disorder-badge" style="background:rgba(224,159,62,.1);color:#b87a20">Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Clinical Features</h5>
+<ul>
+<li>~15% of FL patients have circulating cells</li>
+<li><strong>Cleaved nuclei</strong> (centrocytes) with angular cleft &mdash; characteristic on film</li>
+<li>Generalised lymphadenopathy is typical</li>
+<li>BM: <strong>paratrabecular infiltration</strong> (unlike CLL which is interstitial/diffuse)</li>
+</ul>
+</div>
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
+<ul>
+<li><strong>CD10+, BCL6+, BCL2+</strong></li>
 <li>CD5&minus;, CD23&minus; or weak</li>
-<li>Paratrabecular marrow infiltration (unlike CLL)</li>
+<li><strong>t(14;18)(q32;q21)</strong> &mdash; BCL2 rearrangement</li>
+<li>Surface Ig bright (unlike CLL)</li>
 </ul>
 </div>
 </div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Key Discriminator:</strong> CD10 positivity + t(14;18) + paratrabecular marrow pattern = FL, not CLL. Treatment follows standard FL guidelines (rituximab &plusmn; chemotherapy, obinutuzumab-based regimens).</div>
+</div>
+</div>
+</div>
+
+<!-- LPL/WM -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
+<h4>LPL / Waldenstr&ouml;m Macroglobulinaemia</h4>
+<span class="disorder-badge" style="background:rgba(0,109,119,.1);color:var(--teal)">Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Clinical Features</h5>
+<ul>
+<li>Small lymphocytes + plasmacytoid cells + plasma cells</li>
+<li><strong>Monoclonal IgM paraprotein</strong> (hallmark of WM)</li>
+<li>Hyperviscosity symptoms in ~15% (blurred vision, headache, bleeding)</li>
+<li>Cold agglutinin disease, cryoglobulinaemia, peripheral neuropathy</li>
+<li>Hepatosplenomegaly; lymphadenopathy less prominent</li>
+</ul>
+</div>
+<div class="disorder-section">
+<h5>Immunophenotype &amp; Genetics</h5>
+<ul>
+<li>CD19+, CD20+, CD138+ (plasma cell component)</li>
+<li>CD5&minus; or weak, CD10&minus;, CD23&minus;</li>
+<li><strong>MYD88 L265P</strong> in &gt;90% (near-pathognomonic)</li>
+<li><strong>CXCR4 mutations</strong> in ~30% (affects treatment response)</li>
+</ul>
+</div>
+</div>
+<div class="clinical-action">
+<div class="clinical-action-text"><strong>Treatment:</strong> Hyperviscosity &rarr; urgent plasmapheresis. First-line: BTKi (zanubrutinib preferred) or BR (bendamustine-rituximab). CXCR4-mutated cases respond less well to BTKi. Avoid rituximab monotherapy upfront if IgM &gt;40 g/L (IgM flare risk).</div>
+</div>
+<ul class="dx-checklist" style="margin-top:14px">
+<li><input type="checkbox">Monoclonal <strong>IgM</strong> paraprotein detected</li>
+<li><input type="checkbox">Lymphoplasmacytic morphology on film/BM</li>
+<li><input type="checkbox"><strong>MYD88 L265P</strong> tested/confirmed</li>
+<li><input type="checkbox">CXCR4 mutation status checked</li>
+<li><input type="checkbox">Viscosity level measured (if symptoms)</li>
+</ul>
+</div>
+</div>
+
+<!-- SDRPL -->
+<div class="disorder-card">
+<div class="disorder-header" onclick="this.parentElement.querySelector('.disorder-body').style.display=this.parentElement.querySelector('.disorder-body').style.display==='none'?'block':'none'">
+<h4>SDRPL &mdash; Splenic Diffuse Red Pulp Small B-cell Lymphoma</h4>
+<span class="disorder-badge" style="background:rgba(42,157,143,.1);color:var(--sage)">Rare &middot; Click to expand</span>
+</div>
+<div class="disorder-body">
+<div class="disorder-grid">
+<div class="disorder-section">
+<h5>Key Features</h5>
+<ul>
+<li>Rare; involves splenic <strong>red pulp diffusely</strong> (not marginal zone)</li>
+<li>Villous lymphocytes with round nuclei (unlike SMZL polar villi)</li>
+<li>Moderate splenomegaly</li>
+<li>CD5&minus;, CD23&minus;, Annexin A1&minus;</li>
+<li>CD11c+, CD103+, CD123+, CD25&minus;</li>
+</ul>
+</div>
+<div class="disorder-section">
+<h5>Genetics &amp; Prognosis</h5>
+<ul>
+<li><strong>CCND3 mutations</strong> (Cyclin D3) &mdash; characteristic</li>
+<li><strong>Cyclin D3+</strong> by immunohistochemistry</li>
+<li>No BRAF V600E (excludes HCL)</li>
+<li>Indolent course; splenectomy may be diagnostic and therapeutic</li>
+<li>Limited data: rituximab-based therapy if progressive</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- MASTER COMPARISON TABLE -->
+<div class="card deep" style="margin-top:18px">
+<h4>Master Differential Comparison Table</h4>
+<div class="table-wrap">
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>CLL</th><th>SMZL</th><th>HCL</th><th>SBCL-PN</th><th>MCL (nn)</th><th>FL</th><th>LPL/WM</th></tr></thead>
+<tbody>
+<tr><td><strong>CD5</strong></td><td>+</td><td>&minus;</td><td>&minus;</td><td>&minus;</td><td>+</td><td>&minus;</td><td>&minus;/w</td></tr>
+<tr><td><strong>CD23</strong></td><td>+</td><td>&minus;</td><td>&minus;</td><td>&minus;</td><td>&minus;</td><td>&minus;/w</td><td>&minus;</td></tr>
+<tr><td><strong>CD103</strong></td><td>&minus;</td><td>&minus;</td><td>+</td><td>&plusmn;</td><td>&minus;</td><td>&minus;</td><td>&minus;</td></tr>
+<tr><td><strong>BRAF V600E</strong></td><td>&minus;</td><td>&minus;</td><td>+</td><td>&minus;</td><td>&minus;</td><td>&minus;</td><td>&minus;</td></tr>
+<tr><td><strong>Cyclin D1</strong></td><td>&minus;</td><td>&minus;</td><td>w</td><td>&minus;</td><td>+</td><td>&minus;</td><td>&minus;</td></tr>
+<tr><td><strong>Key mutation</strong></td><td>varies</td><td>NOTCH2</td><td>BRAF</td><td>MAP2K1</td><td>t(11;14)</td><td>t(14;18)</td><td>MYD88</td></tr>
+<tr><td><strong>BM pattern</strong></td><td>interstitial</td><td>intrasinusoidal</td><td>clear-zone</td><td>variable</td><td>nodular</td><td>paratrabecular</td><td>mixed</td></tr>
+<tr><td><strong>Monocytopenia</strong></td><td>&minus;</td><td>&minus;</td><td>+</td><td>&minus;</td><td>&minus;</td><td>&minus;</td><td>&minus;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<details class="test-yourself" style="margin-top:18px">
+<summary>Test Yourself &mdash; Module 7 Quick Check</summary>
+<div class="mini-q">
+<div class="mini-q-stem">A patient has pancytopenia, monocytopenia, dry tap, and cells that are CD103+, CD25+, Annexin A1+. What single molecular test clinches the diagnosis?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>BRAF V600E mutation.</strong> Present in virtually 100% of classical HCL. Negative in all mimics (SBCL-PN, SMZL, SDRPL).</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">Which disorder has intrasinusoidal BM infiltration, NOTCH2 mutations, and an association with hepatitis C?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>SMZL (Splenic Marginal Zone Lymphoma).</strong> Always screen for HCV &mdash; treating hepatitis may resolve the lymphoma.</details>
+</div>
+<div class="mini-q">
+<div class="mini-q-stem">A patient with t(11;14), Cyclin D1+, SOX11&minus;, and no lymphadenopathy. Diagnosis and management approach?</div>
+<details class="mini-q-reveal"><summary>Reveal Answer</summary><strong>Non-nodal leukaemic MCL.</strong> SOX11&minus; with no nodes = indolent subtype. Can be observed if no TP53 disruption and mutated IGHV.</details>
+</div>
+</details>
 </section>
 
-<!-- MODULE 8: FIGURES -->
-<section class="module" id="mod-fig">
-<div class="module-head"><h3>Module 8: Figures &amp; Visual Atlas</h3><span class="module-tag tag-fig">Visual Guide</span></div>
-<div class="module-grid">
-<div class="card"><h4>Fig 1 &mdash; CLL Pathogenesis</h4><img src="images/1.png" alt="Genetic and epigenetic events leading to CLL" style="width:100%;border-radius:10px;margin:8px 0"><p>CLL evolves stepwise from HSC genetic/epigenetic lesions through polyclonal B-cell expansion, oligoclonal selection, MBL, and finally overt CLL.</p></div>
-<div class="card"><h4>Fig 2 &mdash; Blood Film: Typical CLL</h4><img src="images/2.png" alt="CLL blood film showing small mature lymphocytes and smudge cells" style="width:100%;border-radius:10px;margin:8px 0"><p>Small mature lymphocytes with scanty cytoplasm and smudge cells (Gumprecht cells).</p></div>
-<div class="card"><h4>Fig 3 &mdash; Transforming CLL</h4><img src="images/3.png" alt="CLL with increased prolymphocytes" style="width:100%;border-radius:10px;margin:8px 0"><p>Increased prolymphocytes (&gt;15%) signals accelerated/transforming CLL. Dual population of small lymphocytes and larger nucleolated cells.</p></div>
-<div class="card"><h4>Fig 4 &mdash; Polyclonal B-cell Lymphocytosis</h4><img src="images/4.png" alt="Binucleated lymphocytes in polyclonal B-cell lymphocytosis" style="width:100%;border-radius:10px;margin:8px 0"><p>Binucleated lymphocytes characteristic of persistent polyclonal B-cell lymphocytosis (a benign mimic).</p></div>
-<div class="card"><h4>Fig 5 &mdash; Richter Syndrome</h4><img src="images/5.png" alt="Large blast cells of Richter transformation" style="width:100%;border-radius:10px;margin:8px 0"><p>Large blast-like atypical cells corresponding to Richter syndrome with blood involvement.</p></div>
-<div class="card"><h4>Fig 6 &mdash; Treatment Algorithm</h4><img src="images/6.png" alt="CLL treatment algorithm flowchart" style="width:100%;border-radius:10px;margin:8px 0"><p>Treatment pathway integrates disease activity criteria, biology (IGHV/TP53), and patient fitness.</p></div>
-<div class="card"><h4>Fig 6a &mdash; Rai/Binet Staging</h4><img src="images/6a.png" alt="Rai and Binet staging table" style="width:100%;border-radius:10px;margin:8px 0"><p>Clinical staging systems for CLL prognosis and treatment planning.</p></div>
-<div class="card"><h4>Fig 7 &mdash; SMZL Blood Film</h4><img src="images/7.png" alt="Villous lymphocytes in SMZL" style="width:100%;border-radius:10px;margin:8px 0"><p>Villous lymphocytes supporting SMZL pattern on blood film.</p></div>
-<div class="card"><h4>Fig 8 &mdash; Hairy Cell Leukaemia</h4><img src="images/8.png" alt="Hairy cells with fine cytoplasmic projections" style="width:100%;border-radius:10px;margin:8px 0"><p>Typical hairy cells with fine cytoplasmic projections supporting HCL diagnosis.</p></div>
-<div class="card"><h4>Fig 9 &mdash; BM Trephine in HCL</h4><img src="images/9.png" alt="Bone marrow trephine showing HCL infiltration" style="width:100%;border-radius:10px;margin:8px 0"><p>Marrow trephine showing classic clear-zone (fried egg) infiltration pattern.</p></div>
-<div class="card"><h4>Fig 10 &mdash; BM Trephine HCL (Paraffin)</h4><img src="images/10.png" alt="BM trephine HCL paraffin section" style="width:100%;border-radius:10px;margin:8px 0"><p>Paraffin section reinforcing HCL diagnosis with diffuse marrow involvement.</p></div>
-<div class="card"><h4>Fig 11 &mdash; Mantle Cell Lymphoma</h4><img src="images/11.png" alt="Leukaemic MCL cells on blood film" style="width:100%;border-radius:10px;margin:8px 0"><p>Leukaemic MCL cells can mimic CLL morphologically but differ biologically (Cyclin D1+, t(11;14)).</p></div>
-<div class="card"><h4>Fig 12 &mdash; Follicular Lymphoma</h4><img src="images/12.png" alt="Follicular lymphoma leukaemic phase blood film" style="width:100%;border-radius:10px;margin:8px 0"><p>Cleaved nuclei and centrocyte morphology supporting follicular lymphoma leukaemic spillover.</p></div>
-<div class="card"><h4>Fig 13 &mdash; HCL Variant</h4><img src="images/13.png" alt="Splenic B-cell lymphoma with prominent nucleoli" style="width:100%;border-radius:10px;margin:8px 0"><p>Nucleolated villous cells suggesting splenic B-cell lymphoma/leukaemia with prominent nucleoli (HCL variant).</p></div>
-</div>
-</section>
 
 <!-- QUIZ ZONE -->
 <section class="quiz-zone" id="quiz-zone">
